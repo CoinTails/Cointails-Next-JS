@@ -22,7 +22,7 @@ const CreateAccount:React.FC<ChildComponentProps> = ({
     <>
    <div className="rounded-lg max-w-sm mx-4 w-11/12 lg:max-w-lg">
    <div className="rounded-lg  border border-secondary-color-theme ">
-      <div className="">
+      <div className="px-4">
       <HeaderComponent mainText={mainText} secondText={secondText}  />
       <MultiStepsRectangles />
       <Component  />
