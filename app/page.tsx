@@ -1,9 +1,4 @@
-import CreateAccountHeader from "@/components/createAccountApp/CreateAccountHeader";
-import EmailWalletbutton from "@/components/createAccountApp/EmailWalletbutton";
-import CreateAccount from "@/components/createAccountApp/create-account"
-import CreateAccountForm from "@/components/createAccountApp/create-account-form";
-import LoginAccountForm from "@/components/createAccountApp/login-component";
-
+import Multisteps from "@/components/createAccountApp/multisteps"
 
 
 const Home=(
@@ -14,27 +9,8 @@ const Home=(
     
   }
   return (
-    <main className=" flex flex-col gap-2   justify-center items-center mt-20 text-center " >
-      <CreateAccount 
-      component={LoginAccountForm}
-      HeaderComponent={CreateAccountHeader}
-      mainText={headerValues.mainText}
-      secondText={headerValues.secondText}
-      />
-       <CreateAccount 
-      component={EmailWalletbutton}
-      HeaderComponent={CreateAccountHeader}
-      mainText={headerValues.mainText}
-      secondText={headerValues.secondText}
-      />
-      <hr/>
-      <CreateAccount 
-      component={CreateAccountForm}
-      HeaderComponent={CreateAccountHeader}
-      mainText={headerValues.mainText}
-      secondText={headerValues.secondText}
-      />
-      
+    <main className=" flex flex-col gap-2    justify-center items-center m-20 text-center " >
+      <Multisteps/>
       </main>
   )
 }

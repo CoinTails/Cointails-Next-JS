@@ -104,7 +104,7 @@ const LoginAccountForm = () => {
 
         )}
       />
-      <BtnsNextBack nextText={"Next"} />
+      <BtnsNextBack nextText={"Next"} backText={"Back"}/>
       </form>
     </Form>
   

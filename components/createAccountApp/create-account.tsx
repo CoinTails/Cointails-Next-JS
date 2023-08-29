@@ -8,7 +8,6 @@ interface ChildComponentProps{
   mainText?:string,
   secondText?:string,
   isEmail?:boolean,
-
 }
 
 const CreateAccount:React.FC<ChildComponentProps> = ({
@@ -16,7 +15,7 @@ const CreateAccount:React.FC<ChildComponentProps> = ({
   component:Component,
   mainText,
   secondText,
-  isEmail
+  isEmail,
 
 }) => {
   return (

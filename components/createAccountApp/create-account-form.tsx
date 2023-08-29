@@ -49,11 +49,12 @@ const CreateAccountForm:React.FC<CreateAccountProps> = ({
           <FormItem>
           <FormControl className=" focus-visible:border-none">
           <div className="relative focus-visible:border-none">
-                  <div className="absolute top-1/2 left-2 transform -translate-y-1/2 ">
+                  <div className="absolute top-1/2 left-2 transform w-auto -translate-y-1/2 ">
                   {!isEmail?
-                   <UserIcon className="h-4 w-4 text-gray-500 font-extralight pointer-events-none" />
+                  
+                   <UserIcon className="h-4 w-4  text-gray-500 font-extralight pointer-events-none" />
                   :
-
+                    
                   <MailMinus className="h-4 w-4 text-gray-500 font-extralight pointer-events-none" />
                   }
 
@@ -70,7 +71,15 @@ const CreateAccountForm:React.FC<CreateAccountProps> = ({
                   <div className="absolute top-1/2 right-2 transform
                                    -translate-y-1/2
                                    pointer-events-none">
-                    <AlertCircle className="h-4 w-4 text-first-color font-extralight" />
+                    <div className=" relative">
+                        <span className="absolute
+                         rounded border whitespace-nowrap right-0 top-[-1.8rem]
+                           inline-flex text-[8px] text-gray-600 px-[0.5px] font-light border-1
+                           border-first-color">Example : johndoe@gmail.com</span>
+                            <span className="border border-first-color border-t-transparent border-1">d</span>
+                          <AlertCircle className="h-4 w-4 text-first-color font-extralight" />
+
+                      </div>
                   </div>
             </div>
                       </FormControl>
