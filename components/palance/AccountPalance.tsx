@@ -1,5 +1,4 @@
 "use client"
-import CreateAccount from "../ReuseableCard1";
 
 import LoginAccountForm from "../createAccountApp/login-component";
 import CreateAccountHeader from "../createAccountApp/CreateAccountHeader";
