@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import CreateAccountHeader from "@/components/createAccountApp/CreateAccountHeader";
 import EmailWalletbutton from "@/components/createAccountApp/EmailWalletbutton";
-import CreateAccount from "@/components/createAccountApp/create-account"
+import CreateAccount from "@/components/ReuseableCard1"
 import CreateAccountForm from "@/components/createAccountApp/create-account-form";
 import EmailVerify from "@/components/createAccountApp/email-verify";
 import LoginAccountForm from "@/components/createAccountApp/login-component";
@@ -32,8 +32,8 @@ const Multisteps = () => {
     <>
     {step===1&&
     <CreateAccount 
-    component={CreateAccountForm}
     HeaderComponent={CreateAccountHeader}
+    component={CreateAccountForm}
     mainText={headerValues.mainText}
     secondText={headerValues.secondText}
     />

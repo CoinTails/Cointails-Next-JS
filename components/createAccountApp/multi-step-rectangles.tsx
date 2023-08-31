@@ -15,7 +15,6 @@ const MultiStepsRectangles = () => {
           rounded 
          border-secondary-color-theme 
          h-3 w-24 lg:w-28`}></li>
-
         <li className={` ${step==3?"bg-secondary-color-theme":"bg-transparent"} 
             border-2 rounded 
          border-secondary-color-theme 
