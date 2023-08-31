@@ -9,8 +9,8 @@ const Home=(
     
   }
   return (
-    <main className=" flex flex-col gap-2    justify-center items-center m-20 text-center " >
-        <Multisteps />
+    <main className=" flex flex-col gap-2    justify-center items-center my-20 text-center " >
+      <Multisteps/>
       </main>
   )
 }
