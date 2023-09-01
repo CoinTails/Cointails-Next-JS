@@ -55,13 +55,13 @@ const Multisteps = () => {
       mainText={headerValues.mainText}
       secondText={headerValues.secondText}
       />
-        This after you will get code
+        {/* This after you will get code
       <CreateAccount 
       component={EmailVerify}
       HeaderComponent={CreateAccountHeader}
       mainText={headerValues.mainText}
       secondText={headerValues.secondText}
-      />
+      /> */}
       </>
     }
     

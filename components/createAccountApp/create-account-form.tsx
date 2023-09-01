@@ -80,7 +80,7 @@ const CreateAccountForm: React.FC<CreateAccountProps> = ({ isEmail }) => {
                       placeholder={
                         isEmail ? "enter your email" : "Enter your text"
                       }
-                      className=" border relative -z-1 border-first-color
+                      className="h-14  border relative -z-1 border-first-color
                          px-10 py-2 focus:outline-none
                          focus:border-none
                      pr-10 rounded-md "

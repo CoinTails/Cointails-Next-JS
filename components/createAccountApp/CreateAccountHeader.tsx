@@ -7,8 +7,8 @@ interface HeaderProps {
 const CreateAccountHeader:React.FC<HeaderProps> = ({
   mainText='',secondText=''}) => {
   return (
-    <h2 className="mt-4 md:inline-flex  mb-4 font-mono-sans
-               text-lg  lg:text-xl">
+    <h2 className="mt-4 text-center md:inline-flex  mb-4 font-mono-sans
+               text-lg font-bold  lg:text-xl">
                 {mainText} 
               <i className="list list-none text-first-color">&nbsp;  {secondText}
               </i>
