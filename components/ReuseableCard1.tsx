@@ -23,8 +23,10 @@ const ReusableCard1:React.FC<ChildComponentProps> = ({
   return (
     <>
 
-   <div className="rounded-lg  border sm:py-auto pt-5 pb-2 px-0 sm:px-auto 
-           border-secondary-color-theme ">
+   <div className="rounded-lg  border sm:py-auto
+          w-full  md:w-10/12 lg:w-3/4
+          pt-5 pb-2 px-0 sm:px-auto 
+           border-secondary-color-theme">
       <div className="mx-4 sm:mx-8 ">
       <HeaderComponent mainText={mainText} secondText={secondText}  />
       {isMultistep?<MultiStepsRectangles />:null}

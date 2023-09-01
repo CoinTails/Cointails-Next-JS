@@ -3,7 +3,6 @@ import React from 'react'
 import AccountPalance from './AccountPalance'
 import PalanceBtns from './palanceBtns'
 import CreateAccountHeader from '../createAccountApp/CreateAccountHeader'
-import CreateAccount from '../ReuseableCard1'
 import ReusableCard1 from '../ReuseableCard1'
 import Image from 'next/image'
 
