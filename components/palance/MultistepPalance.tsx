@@ -23,7 +23,6 @@ const MultistepPalance = ({
             isMultistep={false}
             />
 
-            <hr/>
              <ReusableCard1 
             HeaderComponent={CreateAccountHeader} 
             component={SendCTS}
