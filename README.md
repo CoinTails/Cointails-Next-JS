@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CoinTails
 
 coinTails app
@@ -45,3 +46,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 >>>>
 >>>
 >>
+=======
+# Frontend-Next-JS-
+Update only for react developers working with Cointails.
+>>>>>>> c55d5b9a30d2cef1f5a43b03374254c867de0c08
