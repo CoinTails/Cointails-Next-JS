@@ -17,7 +17,7 @@ const Wallets = () => {
         </h2>
       <h3 className='my-8 font-normal text-2xl'>Select Wallet</h3>
       </div>
-    <div className='grid grid-cols-3  md:grid-cols-4 justify-center mb-8'>
+    <div className='grid grid-cols-3  justify-center mb-8'>
       <div className='flex flex-col items-center'>
         <Image className='mb-3' src={CoinBase} alt="coinBase" />
         <h3>CoinBase</h3>
