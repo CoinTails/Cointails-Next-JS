@@ -25,7 +25,8 @@ const AccountPalanceNav:React.FC<ChildComponentProps> = ({
         {/* user  */}
         <div className='flex items-center justify-center'>
         <Image className='sm:h-14 md:h-16 md:h-16 md:w-16 sm:w-14 mr-4' src={userAvatar} alt="mainlogo"/>
-        <div className='text-xl sm:hidden md:block   font-bold'><span className='text-first-color ' >Coin</span>
+        <div className='text-xl hidden sm:block   font-bold'>
+          <span className='text-first-color ' >Coin</span>
                    <span className='text-first-color'>Tails</span>
           </div>
         </div>
