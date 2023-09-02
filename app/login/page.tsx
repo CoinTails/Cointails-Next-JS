@@ -5,7 +5,7 @@ import LoginMultisteps from '@/components/loginApp/LoginMultisteps';
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className='mx-4'>
       <AccountPalanceNav  component={LoginMultisteps} />
     </div>
   )
