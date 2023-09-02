@@ -1,9 +1,16 @@
-import React from 'react'
 import mainlogo from "../public/images/mainlogo.svg"
 import userAvatar from "../public/images/userAvatar.svg"
-import Multisteps from './createAccountApp/multisteps'
 import Image from 'next/image'
-const AccountPalanceNav = () => {
+
+
+
+interface ChildComponentProps{
+  component:React.FC,
+  }
+
+const AccountPalanceNav:React.FC<ChildComponentProps> = ({
+  component:Component,
+ }) => {
   return (
     <div>
 
@@ -21,12 +28,11 @@ const AccountPalanceNav = () => {
         <div className='text-xl font-bold'><span className='text-first-color ' >Coin</span>
                    <span className='text-first-color'>Tails</span>
           </div>
-  
         </div>
         </div>
         <div className='flex flex-col items-center justify-center my-20'>
           <h1 className='text-3xl my-4 font-bold text-secondary-color-theme'>Create Your Account</h1>
-          <Multisteps/>
+          <Component  />
         </div>
     </div>
   )

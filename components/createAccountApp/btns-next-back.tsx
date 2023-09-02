@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { Button } from '@/components/ui/button'
 interface BtnsNextBackProps {
   nextText?:string,
   backText?:string,
   isDisabled?:boolean,
   mainColor?:string,
-  secondColor?:string
+  secondColor?:string,
+  nextIcon?:ReactElement,
+  backIcon?:ReactElement
+
 }
 
 import { useMultiStepsForm } from '@/hooks/useMultiStepsForm'
 const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
   nextText,
   backText,
+  nextIcon,
+  backIcon,
   mainColor,
   secondColor,
   isDisabled=false
@@ -34,12 +39,12 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
             ${nextText?'flex-row-reverse':'flex-row'} mt-4 `}>
              <Button
 
-                  disabled={step===3}
+                  disabled={step===3 && isDisabled}
                   onClick={handleNext}
                   type="submit"
                   className={`ml ${nextText?'':'hidden'}   px-6 sm:px-10  bg-secondary-color-theme `}
                   >
-                  {nextText}
+                  {nextText} <span className='ml-4'>{nextIcon && nextIcon}</span>
           </Button>
           <Button 
                 
@@ -48,11 +53,12 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
                   variant={"outline"}
                   type="submit"
                   onClick={handlePrevious}
-                  className={`ml ${step !==1?'':'hidden'}   px-6 sm:px-10 
+                  className={`ml ${backText?'':'hidden'}   px-6 sm:px-10 
                    border-secondary-color-theme text-secondary-color-theme `}
                   >
-                  {backText}
+                  {backText} {backIcon && backIcon }
           </Button>
+
         </div>
   )
 }

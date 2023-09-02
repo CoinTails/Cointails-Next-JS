@@ -3,8 +3,8 @@ import MultiStepsRectangles from "@/components/createAccountApp/multi-step-recta
 
 
 interface ChildComponentProps{
-  HeaderComponent:React.FC<{mainText?:string;secondText?:string}>,
-  component:React.FC,
+  HeaderComponent?:React.FC<{mainText?:string;secondText?:string}>,
+  component:React.FC<{isEmail?:boolean}>,
   mainText?:string,
   secondText?:string,
   isEmail?:boolean,
@@ -28,9 +28,10 @@ const ReusableCard1:React.FC<ChildComponentProps> = ({
           pt-5 pb-2 px-0 sm:px-auto 
            border-secondary-color-theme">
       <div className="mx-4 sm:mx-8 text-center ">
-      <HeaderComponent mainText={mainText} secondText={secondText}  />
+        {HeaderComponent?<HeaderComponent mainText={mainText} secondText={secondText}  />
+        :null}
       {isMultistep?<MultiStepsRectangles />:null}
-      <Component  />
+      <Component isEmail={isEmail}  />
       </div>
  </div>
  

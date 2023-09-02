@@ -1,11 +1,12 @@
 import React from 'react'
 import AccountPalanceNav from '@/components/AccountPalanceNav'
+import Multisteps from '@/components/createAccountApp/multisteps'
 const createAccountPage = () => {
   return (
     <>
     <div className='mx-4'>
 
-    <AccountPalanceNav />
+    <AccountPalanceNav component={Multisteps}/>
     </div>
     </>
   )
