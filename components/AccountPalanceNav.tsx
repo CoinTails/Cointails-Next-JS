@@ -24,7 +24,7 @@ const AccountPalanceNav:React.FC<ChildComponentProps> = ({
           </header>
         </div>
         {/* user  */}
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center cursor-pointer justify-center'>
           <UserCircle2  className=' text-gray-200 h-14 w-14 mr-4' />
         {/* <Image 
         className='sm:h-14 md:h-16 w-14 md:w-16 sm:w-14 mr-4' 

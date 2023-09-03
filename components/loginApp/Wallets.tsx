@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import CoinBase from "../../public/images/coinBase.png";
 import Exodus from "../../public/images/Exodus.png";
 import MetaMask from "../../public/images/metaMask.png";
-import RainBow from "../../public/images/rainbow.png";
+import Pitpay from "../../public/images/pitpay.png";
 import Image from 'next/image';
 import { Wallet, Link } from 'lucide-react';
 import BtnsNextBack from '../createAccountApp/btns-next-back';
@@ -34,24 +34,28 @@ const Wallets = () => {
   }, []);
 
   return (
-    <div className='text-center bg-[rgba(251,247,247,0.86)]'>
-      <div className='flex flex-col justify-center'>
+    <div className='text-center  bg-[rgba(251,247,247,0.86)]'>
+      <div className='flex flex-col items-center justify-center'>
         <h2 className='flex justify-center font-bold text-3xl text-secondary-color-theme'>
           <Wallet className='h-8 w-8 mr-4 text-secondary-color-theme' />
           Connect Wallet
         </h2>
         <h3 className='my-8 font-normal text-2xl'>Select Wallet</h3>
       </div>
-      <div
+      <div  
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))"
+            }}
         ref={componentRef}
-        className='relative bg- grid grid-cols-2 sm:grid-cols-4 bg-[rgba(251,247,247,0.86)]  justify-center mb-8'
+        className='relative   gap-2 bg-[rgba(251,247,247,0.86) ]  justify-center mb-8'
       >
         <div
           onClick={() => {
             handleActiveItem('CoinBase');
           }}
           className={`relative w-fit 
-          flex flex-col items-center cursor-pointer 
+          flex flex-col justify-center items-center cursor-pointer 
           `}
         >
           <Image className={`mb-3
@@ -116,17 +120,17 @@ const Wallets = () => {
         
         <div
           onClick={() => {
-            handleActiveItem('RainBow');
+            handleActiveItem('Pitpay');
           }}
           className={`relative w-fit flex flex-col items-center cursor-pointer 
           `}
         >
-          <Image className={`mb-3
-            ${activeItem =='RainBow' && ' transition-all border-4 rounded-xl border-first-color transform scale-110'}
+          <Image className={`rounded-lg mb-3  w-[120px] h-[120px] 
+            ${activeItem =='Pitpay' && ' transition-all border-4 rounded-xl border-first-color transform scale-110'}
           `} 
-          src={RainBow} alt='coinBase' />
-          <h3 className={`${activeItem =='RainBow' && 'transition-all  text-first-color' }`}>RainBow</h3>
-          {activeItem !== 'RainBow' && (
+          src={Pitpay} alt='coinBase' />
+          <h3 className={`${activeItem =='Pitpay' && 'transition-all  text-first-color' }`}>Pitpay</h3>
+          {activeItem !== 'Pitpay' && (
             <div
               className={`${
                 activeItem !== null && 'absolute'
@@ -204,17 +208,17 @@ const Wallets = () => {
         
         <div
           onClick={() => {
-            handleActiveItem('RainBow1');
+            handleActiveItem('Pitpay1');
           }}
           className={`relative w-fit flex flex-col items-center cursor-pointer 
           `}
         >
-          <Image className={`mb-3
-            ${activeItem =='RainBow1' && ' transition-all border-4 rounded-xl border-first-color transform scale-110'}
+          <Image className={`rounded-lg mb-3  w-[120px] h-[120px]
+            ${activeItem =='Pitpay1' && ' transition-all border-4 rounded-xl border-first-color transform scale-110'}
           `} 
-          src={RainBow} alt='RainBow1' />
-          <h3 className={`${activeItem =='RainBow' && 'transition-all  text-first-color' }`}>RainBow</h3>
-          {activeItem !== 'RainBow1' && (
+          src={Pitpay} alt='Pitpay1' />
+          <h3 className={`${activeItem =='Pitpay' && 'transition-all  text-first-color' }`}>Pitpay</h3>
+          {activeItem !== 'Pitpay1' && (
             <div
               className={`${
                 activeItem !== null && 'absolute'

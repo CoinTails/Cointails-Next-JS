@@ -1,6 +1,7 @@
 import Multisteps from "@/components/createAccountApp/multisteps"
 import AccountPalance from "@/components/palance/AccountPalance"
-
+import MainCard from "@/components/cards/MainCard"
+import RecommendedSeller from "@/components/cards/RecommendedSeller"
 const Home=(
 )=> {
   const headerValues = {
@@ -10,7 +11,8 @@ const Home=(
   }
   return (
     <main className=" flex flex-col gap-2    justify-center items-center my-20 text-center " >
-      <Multisteps/>
+      <MainCard />
+      <RecommendedSeller />
       </main>
   )
 }
