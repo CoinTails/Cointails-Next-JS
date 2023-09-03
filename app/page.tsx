@@ -11,7 +11,10 @@ const Home=(
   }
   return (
     <main className=" flex flex-col gap-2    justify-center items-center my-20 text-center " >
+      Top Products card
       <MainCard />
+
+      Recommended Sellers card
       <RecommendedSeller />
       </main>
   )
