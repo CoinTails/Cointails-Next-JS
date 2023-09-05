@@ -2,7 +2,7 @@ import React from 'react'
 import { ShoppingBag,Home,BadgePercent, GalleryHorizontal} from 'lucide-react'
 const HorizonalScrollNav = () => {
   return (
-    <div className='px-2 sm:px-4 flex font-normal items-center 
+    <div className='px-2 overflow-x-scroll  sm:px-4 flex font-normal items-center 
      justify-between w-full h-20 bg bg-opacity-first-color' 
     style={{ scrollbarColor: 'none' }}>
         

@@ -11,8 +11,8 @@ const BecomeSallerAndSearch = () => {
   const form = useForm();
   return (
     <div className="w-full flex justify-between items-center ">
-      <Form {...form}>
-      <form className="my-8">
+      <Form {...form} >
+      <form className="my-8 w-1/2" >
     {/* Search field */}
     <FormField
         

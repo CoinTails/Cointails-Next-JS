@@ -6,7 +6,7 @@ const HeaderCard = () => {
   return (
     <>
     <div className="mt-2 w-full flex justify-between items-center">
-      <Image className="w-60  md:w-80" src={fullLogo} alt="index Image"/>
+      <Image className="w-52  md:w-80" src={fullLogo} alt="index Image"/>
       <UserDropDownCard />
     </div>
     <BecomeSallerAndSearch />
