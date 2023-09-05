@@ -21,8 +21,10 @@ const MainCard = () => {
         <span>(559)</span>
       </div>
     <p className='font-bold items-center mt-2'>Ether 70.00</p>
-  <Button className="bg-first-color font-bold text-white rounded-lg px-4 pt-2 my-4">Add to Cart 
-  <ShoppingCart className='mx-2' /></Button>
+  <Button className="bg-first-color font-bold text-white rounded-lg px-4 pt-2 my-4">
+          Add to Cart 
+        <ShoppingCart className='mx-2' />
+  </Button>
     </div>
   </div>
 

@@ -1,7 +1,9 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+
 @layer base {
   :root {
 
@@ -9,6 +11,14 @@
     --first-color:#39A;
     --text-color:'#000';
     --foreground: 222.2 84% 4.9%;
+
+    --primary-first-color:#7149E3;
+    --primary-second-color:#A049E3;
+
+    --opacity-first-color:#EEE9FC;
+    --first-dark-color:#3E3E3E;
+    --main-background-color:#F1F1F1;
+    --main-paragraph-color:#5E5E5E;
     --secondary-color-theme:#9B619B;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;

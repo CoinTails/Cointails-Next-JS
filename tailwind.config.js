@@ -8,6 +8,7 @@ module.exports = {
     './src/**/*.{ts,tsx}',
 	],
   theme: {
+    sans: ['system-ui', 'Helvetica Neue', 'Helvetica', 'Arial'],
     container: {
       center: true,
       padding: "2rem",
@@ -20,6 +21,15 @@ module.exports = {
         'main-font-family':'var(--main-font-family)',
         'first-color':'var(--first-color)',
         'secondary-color-theme': 'var(--secondary-color-theme)',
+
+        'primary-first-color':'var(--primary-first-color)',
+        'primary-second-color':'var(--primary-second-color)',
+
+        'opacity-first-color':'var(--opacity-first-color)',
+        'first-dark-color':'var(--first-dark-color)',
+        'main-background-color':'var(--main-background-color)',
+        'main-paragraph-color':'var(--main-paragraph-color)',
+
         input: "hsl(var(--input))",
          border:'hsl(var(--secondary-color-theme))',
         input: "hsl(var(--input))",
