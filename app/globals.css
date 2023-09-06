@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 
+
+
+
 @layer base {
   :root {
 
@@ -11,7 +14,6 @@
     --first-color:#39A;
     --text-color:'#000';
     --foreground: 222.2 84% 4.9%;
-
     --primary-first-color:#7149E3;
     --primary-second-color:#A049E3;
 

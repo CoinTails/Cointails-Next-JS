@@ -68,7 +68,8 @@ const CreateAccountForm: React.FC<CreateAccountProps> = ({ isEmail }) => {
               <FormItem>
                 <FormControl className=" focus-visible:border-none">
                   <div className="relative focus-visible:border-none">
-                    <div className="absolute z-50 top-1/2 left-2 transform w-auto -translate-y-1/2 ">
+                    <div className="absolute z-50 top-1/2 left-2 transform w-auto
+                     -translate-y-1/2 ">
                       {!isEmail ? (
                         <UserIcon className="h-4 w-4  text-gray-500 font-extralight pointer-events-none" />
                       ) : (
