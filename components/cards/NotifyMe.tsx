@@ -41,8 +41,12 @@ const NotifyMe = () => {
                         <Mail className="text-center w-8 h-8"/>
                   </div>
                 </div>
-                <Input className=" rounded-full text-primary-second-color border-2 px-20 py-8
-                     border-primary-second-color placeholder-red-950" placeholder="YOURMAIL@GMAIL.COM" />
+                <Input 
+                
+                className=" rounded-full text-primary-second-color border-2 px-20 py-8
+                     border-primary-second-color focus:outline-none
+                     focus:border-none
+                      hover:outline-primary-second-color"  placeholder="YOURMAIL@GMAIL.COM" />
               </div>
               <Button style={{
                 background: "radial-gradient(circle at right, #A049E3 40%, #7149E3 80%)"
