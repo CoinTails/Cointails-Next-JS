@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ExploreCategories = () => {
   return (
     <div className='rounded-xl px-4 py-8  text-left w-full bg-main-background-color '>
@@ -7,7 +5,7 @@ const ExploreCategories = () => {
       <div 
      style={{
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))"
+      gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))"
     }}  >
       <p>John Lewis</p>
       <p>Atlassian</p>

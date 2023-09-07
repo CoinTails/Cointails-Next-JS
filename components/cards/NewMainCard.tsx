@@ -6,22 +6,34 @@ import { Button } from '../ui/button'
 import { bruno_ace } from '@/app/fonts'
 
 const RecommendedSeller = () => {
+  let Product_text = `Voluptatibus laboriosam numquam exercitationem cumque repellat perspiciatis tempore esse est. Explicabo sed quo voluptas rerum asperiores veritatis amet sed ab. Tempore accusamus accusantium at hic ut. Temporibus consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi.Officiis perspiciatis ratione in odio repellat quia.`
+
+  let product_desc = Product_text.split(" ");
+  console.log(product_desc.length)
+  
   return (
     <div className='rounded-xl 
        p-4  bg-white
          mx-2 
-         flex 
-          min-w-[500px]
-           max-w-[500px]
+         flex
+         min-w-[400px]
+         max-w-[400px]
+          sm:min-w-[500px]
+           sm:max-w-[500px]
             border-1 
-            border-gray-500 h-72 shadow-lg '>
-      <Image className='r rounded-2xl max-w-full h-full min-h-full w-4/12' src={recommendedSeller} alt=""/>
+            border-gray-500 h-56 md:h-72  shadow-lg '>
+      <Image className=' rounded-2xl max-w-full h-full min-h-full w-4/12' src={recommendedSeller} alt=""/>
       <div className=' w-8/12 ml-4'>
       <h2 className='text-first-dark-color text-left text-xl mb-2'>Blue Tealish Chair</h2>
-      <p className='text-left leading-tight text-xs font-light
+      <p className='text-left hidden md:block leading-tight text-xs font-light
        text-gray-600'> 
-      Voluptatibus laboriosam numquam exercitationem cumque repellat perspiciatis tempore esse est. Explicabo sed quo voluptas rerum asperiores veritatis amet sed ab. Tempore accusamus accusantium at hic ut. Temporibus consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi.
-       Officiis perspiciatis ratione in odio repellat quia.
+       {/* large screen */}
+       {product_desc.length >= 40?product_desc.slice(0,40).join(" "):product_desc.join(" ")}
+      </p>
+      {/* small screen  */}
+      <p className='text-left block md:hidden leading-tight text-xs font-light
+       text-gray-600'> 
+       {product_desc.length >= 25?product_desc.slice(0,25).join(" "):product_desc}
       </p>
       <div className='flex justify-between items-center mt-4'>
         <Button className=' rounded-full bg-gray-200 ' variant={"ghost"} size={"icon"}>

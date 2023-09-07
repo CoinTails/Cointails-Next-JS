@@ -44,10 +44,11 @@ const BecomeSallerAndSearch = () => {
 
         )}
       />
+      
       </form>
       </Form>
-      <Button className="text-primary-second-color bg-main-background-color" variant={"outline"} >
-        <span className="hidden sm:block">
+      <Button className="hidden md:block text-primary-second-color bg-main-background-color" variant={"outline"} >
+        <span className="hidden lg:block">
           Become a Seller on Coin Tails
           </span>
         <Image src={TickerStar} alt={"TickerStar"} /></Button>
