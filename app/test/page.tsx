@@ -10,7 +10,6 @@ const Home=(
     <main  className="">
       <div >
       <NotifyMe/>
-
       </div>
 
       </main>
