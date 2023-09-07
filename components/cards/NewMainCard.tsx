@@ -16,9 +16,9 @@ const RecommendedSeller = () => {
       <div className='rounded-xl 
        p-4  bg-white
          mx-2 
-         flex
-         min-w-[400px]
-         max-w-[400px]
+         flex w-screen
+         min-w-screen
+         max-w-screen
           sm:min-w-[500px]
            sm:max-w-[500px]
             border-1 
@@ -57,7 +57,7 @@ const RecommendedSeller = () => {
             variant={"ghost"} className='rounded-3xl text-primary-first-color'>
               <ShoppingCart className='h-4 w-4 md:h-6 md:w-6 mr-2 text-primary-first-color '/> Add to cart</Button>
       </div>
-      <div className='mt-4 mb-4 text-right text-2xl md:text-3xl font-bold text-primary-second-color'>
+      <div className='mt-4 mb-4 text-right text-xl md:text-3xl font-bold text-primary-second-color'>
         <span className={bruno_ace.className}>CTS </span>
         <span>4100</span>
       </div>

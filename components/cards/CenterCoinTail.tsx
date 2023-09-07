@@ -17,11 +17,11 @@ const CenterCoinTail: React.FC<ImageComponentProps> = ({
   return (
     <>
     <div className= "flex flex-col items-center justify-between  ">
-              <div className="flex flex-col justify-center items-center">
+              <div className="w-full flex flex-col  justify-center  items-center">
               <Image src={ourLogoSrc} className="w-28 sm:w-32 h-32 lg:w-40 md:h-40  mb-8" alt=" mainlogo" />
-              <div className="flex mb-4">        
-                <Image className="w-36 sm:w-52" src={coinLogoSrc} alt=" Coin Logo" /> &nbsp; &nbsp;
-                <Image className="w-36 sm:w-52" src={tailLogoSrc} alt=" Tail Logo" />
+              <div className=" rounded-full p-4 flex bg-[#eee]  mb-4">        
+                <Image className="w-32 sm:w-52" src={coinLogoSrc} alt=" Coin Logo" /> &nbsp; &nbsp;
+                <Image className="w-32 sm:w-52" src={tailLogoSrc} alt=" Tail Logo" />
                 </div>
                 <p className="text-sm hidden md:block font-bold sm:text-md text-primary-second-color">REVOLUTIONISING E-COMMERCE USING WEB 3</p>
             

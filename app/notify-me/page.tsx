@@ -8,7 +8,7 @@ const Home=(
   }
   return (
     <main  className="">
-      <div >
+      <div className="" >
       <NotifyMe/>
       </div>
 
