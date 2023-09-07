@@ -7,13 +7,16 @@ const HorizonalScrollNav = () => {
     style={{ scrollbarColor: 'none' }}>
         
         <div className=' flex justify-center items-center text-first-dark-color
+        transform transition-all duration-200 hover:scale-105 hover:font-bold hover:text-primary-first-color
       '>
-           <Home className=' text-main-paragraph-color mr-2'/>
+        
+           <Home className=' 
+             mr-2'/>
           Home
           </div>
           <div className=' flex justify-center items-center mx-8
                      text-first-dark-color  '>
-           <BadgePercent className=' text-main-paragraph-color mr-2'/>
+           <BadgePercent className=' text-main-paragraph-color  mr-2'/>
           Offers
           </div>
 
