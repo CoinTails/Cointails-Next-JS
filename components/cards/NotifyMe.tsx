@@ -21,27 +21,30 @@ import whiteTail from "../../public/images/whiteTail.svg"
 const NotifyMe = () => {
   return (
     <div
+    style={{
+      backgroundColor:"rgba(113 73 227 / 20%)"
+    }}
      className={cn(bruno_ace.className,'')}
     >
             <div
             style={{
               boxShadow:`
-               20px 20px    5px rgba(113 73 227 / 20%) ,
-               20px -20px   5px rgba(113 73 227 / 20%), 
-               -20px 20px   5px rgba(113 73 227 / 20%), 
-               -20px -20px  5px rgba(113 73 227 / 20%)`
+               20px 20px    5px 2px rgba(113 73 227 / 20%) ,
+               20px -20px   5px 2px rgba(113 73 227 / 20%), 
+               -20px 20px   5px 2px rgba(113 73 227 / 20%), 
+               -20px 20px  5px  2px rgba(113 73 227 / 20%)`
 
             }}
             className='bg-gradient-radial-circle-left rounded-3xl
-             w-[90vw] mx-auto h-[90vh] my-[5vh]  overflow-hidden z-10 '>
+             w-[90vw] mx-auto h-[90vh]  my-[5vh]  overflow-hidden z-10 '>
             <div className="flex flex-col justify-center lg:px-40 md:justify-between w-full md:w-[60%] 
-            md:max-w-[60%] h-[100vh] px-4 md:py10 py-11">
+            md:max-w-[60%] h-[100vh] px-4 md:py-10 py-11">
               {/* large screen */}
-              <div className='hidden md:block'>
+              <div className=' md:block'>
               <CenterCoinTail ourLogoSrc={OurLogo} coinLogoSrc={Coin} tailLogoSrc={Tail} />
               </div>
               {/* small screen */}
-              <div className='block mb-16 md:mb-4 md:hidden '>
+              <div className='hidden mb-16 md:mb-4 md:hidden '>
               <CenterCoinTail ourLogoSrc={whiteLogo} coinLogoSrc={whiteCoin} tailLogoSrc={whiteTail} />
               </div>
             <div 
@@ -53,8 +56,8 @@ const NotifyMe = () => {
     
               }}
              className="rounded-xl my-20 px-4 py-4 flex flex-col justify-center items-center ">
-              <h2 className="text-[0.65rem] sm:text-md w-full text-white
-                 md:text-first-dark-color font-bold">
+              <h2 className="text-[0.65rem] sm:text-md w-full 
+                 md:text-first-dark-color font-bold ">
                   ENTER YOUR MAIL TO GET NOTIFIED WHEN ARE LIVE</h2>
               <div className="relative w-full my-8">
                 <div className="absolute left-[-5px] rounded-full bg-primary-second-color  h-full w-20 ">

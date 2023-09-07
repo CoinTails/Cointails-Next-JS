@@ -96,8 +96,8 @@
 .bg-gradient-radial-circle-left {
   background: radial-gradient(circle at left, #eee 60%, #A049E3 40%, #7149E3 80%);
 }
-@media screen and (max-width:767px) {
+/* @media screen and (max-width:767px) {
   .bg-gradient-radial-circle-left {
     background: radial-gradient(circle at bottom,#A049E3 , #160a37);
   }
-}
+} */
