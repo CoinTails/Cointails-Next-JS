@@ -12,7 +12,8 @@ const RecommendedSeller = () => {
   console.log(product_desc.length)
   
   return (
-    <div className='rounded-xl 
+    <div>
+      <div className='rounded-xl 
        p-4  bg-white
          mx-2 
          flex
@@ -21,7 +22,19 @@ const RecommendedSeller = () => {
           sm:min-w-[500px]
            sm:max-w-[500px]
             border-1 
-            border-gray-500 h-56 md:h-72  shadow-lg '>
+            border-gray-500
+             h-60
+             md:h-72
+              shadow-lg 
+              transform 
+              transition-all duration-500
+              
+        
+              hover:scale-110
+              static z-20
+              
+              
+              '>
       <Image className=' rounded-2xl max-w-full h-full min-h-full w-4/12' src={recommendedSeller} alt=""/>
       <div className=' w-8/12 ml-4'>
       <h2 className='text-first-dark-color text-left text-xl mb-2'>Blue Tealish Chair</h2>
@@ -50,6 +63,8 @@ const RecommendedSeller = () => {
       </div>
       </div>
     </div>
+    </div>
+    
   )
 }
 
