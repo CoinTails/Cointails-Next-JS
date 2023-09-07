@@ -10,22 +10,30 @@ const HorizonalScrollNav = () => {
         transform transition-all duration-200 hover:scale-105 hover:font-bold hover:text-primary-first-color
       '>
         
-           <Home className=' 
+           <Home
+            className=' 
              mr-2'/>
           Home
           </div>
-          <div className=' flex justify-center items-center mx-8
-                     text-first-dark-color  '>
-           <BadgePercent className=' text-main-paragraph-color  mr-2'/>
+          <div className=' flex justify-center items-center text-first-dark-color
+        transform transition-all duration-200 hover:scale-105 hover:font-bold hover:text-primary-first-color
+      '>
+           <BadgePercent
+            className='   mr-2'/>
           Offers
           </div>
 
-        <div className=' flex justify-center items-center text-first-dark-color mx-8  '>
-           <ShoppingBag className=' text-main-paragraph-color mr-2'/>
+          <div className='flex justify-center items-center text-first-dark-color
+        transform transition-all duration-200 hover:scale-105 hover:font-bold hover:text-primary-first-color
+      '>
+          <ShoppingBag 
+          className='  mr-2'/>
           Popular
           </div>
-        <div className=' flex justify-center items-center text-first-dark-color mx-8  '>
-           <GalleryHorizontal className=' text-main-paragraph-color mr-2'/>
+          <div className=' flex justify-center items-center text-first-dark-color
+        transform transition-all duration-200 hover:scale-105 hover:font-bold hover:text-primary-first-color
+      '>
+           <GalleryHorizontal className=' mr-2'/>
            Categories
           </div>
         </div>
