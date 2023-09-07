@@ -11,7 +11,9 @@ const Home=(
       secondText:"header second",    
   }
   return (
-    <main  className="mx-auto w-full px-4 max-w-full sm:max-w-7xl flex flex-col gap-2    justify-center items-center mb-20 text-center " >
+    <main  className="mx-auto 
+      w-full md:px-8 max-w-full sm:max-w-7xl flex flex-col
+         gap-4    justify-center items-center mb-20 text-center " >
       <HeaderCard />
       <HorizonalScrollNav/>
       {/* on offer */}
@@ -21,7 +23,7 @@ const Home=(
           <p className="flex cursor-pointer">see All <ChevronRightSquare className="mx-2 text-first-dark-color"/></p>
         </div>
 
-      <div className="w-full flex overflow-x-scroll ">
+      <div className="w-full flex overflow-x-scroll overflow-y-hidden max-h-full ">
       <NewMainCard />
       <NewMainCard />
       <NewMainCard />

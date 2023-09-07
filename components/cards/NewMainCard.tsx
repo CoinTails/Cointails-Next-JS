@@ -33,17 +33,18 @@ const RecommendedSeller = () => {
       {/* small screen  */}
       <p className='text-left block md:hidden leading-tight text-xs font-light
        text-gray-600'> 
-       {product_desc.length >= 25?product_desc.slice(0,25).join(" "):product_desc}
+       {product_desc.length >= 25?product_desc.slice(0,20).join(" "):product_desc}
       </p>
-      <div className='flex justify-between items-center mt-4'>
-        <Button className=' rounded-full bg-gray-200 ' variant={"ghost"} size={"icon"}>
-          <Share2 className='text-gray-500'/></Button>
+      <div className='flex justify-between items-center mt-2 md:mt-4'>
+        <Button className=' rounded-full  bg-gray-200 ' variant={"ghost"} size={"icon"}>
+          <Share2 className='h-4 w-4 md:h-6 md:w-6 text-gray-500'/></Button>
         <Button style={{
           background:'rgba(113, 73, 227, 0.10'
         }}
-            variant={"ghost"} className='rounded-3xl text-primary-first-color'><ShoppingCart className='mr-2 text-primary-first-color'/> Add to cart</Button>
+            variant={"ghost"} className='rounded-3xl text-primary-first-color'>
+              <ShoppingCart className='h-4 w-4 md:h-6 md:w-6 mr-2 text-primary-first-color '/> Add to cart</Button>
       </div>
-      <div className='mt-4 mb-4 text-right text-3xl font-bold text-primary-second-color'>
+      <div className='mt-4 mb-4 text-right text-2xl md:text-3xl font-bold text-primary-second-color'>
         <span className={bruno_ace.className}>CTS </span>
         <span>4100</span>
       </div>
