@@ -15,7 +15,7 @@ const BecomeSallerAndSearch = () => {
       <form className="my-8 w-1/2" >
     {/* Search field */}
     <FormField
-        
+
         name="username"
         render={({ field }) => (
           
@@ -47,7 +47,7 @@ const BecomeSallerAndSearch = () => {
       
       </form>
       </Form>
-      <Button className="hidden md:block text-primary-second-color bg-main-background-color" variant={"outline"} >
+      <Button className="hidden md:flex text-primary-second-color bg-main-background-color" variant={"outline"} >
         <span className="hidden md:flex">
           Become a Seller on Coin Tails
           </span>

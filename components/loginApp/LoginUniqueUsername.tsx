@@ -102,7 +102,7 @@ const LoginUniqueName: React.FC<CreateAccountProps> = ({ isEmail }) => {
             )}
           />
           <div className="flex justify-between items-center mt-4">
-          <div onClick={HandleToggle} className="text-secondary-color-theme cursor-pointer">
+          <div onClick={HandleToggle} className="text-secondary-color-theme hover:text-primary-second-color cursor-pointer">
             Login with Email</div>
           <BtnsNextBack  nextText="Next"/>         
           </div>
@@ -149,7 +149,7 @@ const LoginUniqueName: React.FC<CreateAccountProps> = ({ isEmail }) => {
           )}
         />
         <div className="flex justify-between items-center mt-4">
-        <button onClick={HandleToggle}  className="text-secondary-color-theme cursor-pointer">
+        <button onClick={HandleToggle}  className="text-secondary-color-theme hover:text-primary-second-color cursor-pointer">
             {"Login With Username"}</button>
         <BtnsNextBack  nextText="Next"/>         
         </div>

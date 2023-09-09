@@ -48,8 +48,8 @@ const LoginForm = () => {
       
                     placeholder="Create Password"
                     className="h-14 border border-first-color
-                         px-10 py-2 focus:outline-none
-                         focus:border-none
+                         px-10 py-2 focus:outline-none ring focus:ring-primary-second-color
+                         focus:border-primary-second-color
                      pr-10 rounded-md "
                     {...field}
                   />

@@ -6,7 +6,7 @@ const createAccountPage = () => {
     <>
     <div className='mx-4'>
 
-    <AccountPalanceNav component={Multisteps}/>
+    <AccountPalanceNav title={"create Your Account"}  component={Multisteps}/>
     </div>
     </>
   )

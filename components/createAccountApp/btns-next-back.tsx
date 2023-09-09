@@ -42,7 +42,7 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
                   disabled={step===3 && isDisabled}
                   onClick={handleNext}
                   type="submit"
-                  className={`ml ${nextText?'':'hidden'}   px-6 sm:px-10  bg-secondary-color-theme `}
+                  className={`ml ${nextText?'':'hidden'} hover:bg-primary-second-color hover:text-white   px-6 sm:px-10  bg-secondary-color-theme `}
                   >
                   {nextText} <span className='ml-4'>{nextIcon && nextIcon}</span>
           </Button>
@@ -53,7 +53,7 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
                   variant={"outline"}
                   type="submit"
                   onClick={handlePrevious}
-                  className={`ml ${backText?'':'hidden'}   px-6 sm:px-10 
+                  className={`ml ${backText?'':'hidden'} hover:border-primary-second-color hover:text-primary-second-color px-6 sm:px-10 
                    border-secondary-color-theme text-secondary-color-theme `}
                   >
                   {backText} {backIcon && backIcon }

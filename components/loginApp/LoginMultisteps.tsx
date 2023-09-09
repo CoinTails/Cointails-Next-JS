@@ -16,15 +16,14 @@ import ReusableCard1 from '@/components/ReuseableCard1';
 
 const LoginMultisteps = () => {
   const headerValues = {
-    mainText:"First lets create",
-    secondText:"Your Idintity"
+    mainText:"",
+    secondText:""
     }
     const {step,setStep,next,setNext,previous,setPrevious
       }=useMultiStepsForm();
     
       const handleNext=()=>{
         setNext();
-
       }
       const handlePrevious=()=>{
         setPrevious();

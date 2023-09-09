@@ -6,11 +6,14 @@ import Image from 'next/image'
 
 
 interface ChildComponentProps{
+  title:string,
   component:React.FC,
+
   }
 
 const AccountPalanceNav:React.FC<ChildComponentProps> = ({
   component:Component,
+  title:title
  }) => {
   return (
     <div>
@@ -36,7 +39,8 @@ const AccountPalanceNav:React.FC<ChildComponentProps> = ({
         </div>
         </div>
         <div className='flex flex-col items-center justify-center my-20'>
-          <h1 className='text-3xl my-4 font-bold text-secondary-color-theme'>Create Your Account</h1>
+          <h1 className='text-3xl my-4 font-bold text-secondary-color-theme'>
+            {title}</h1>
           <Component  />
         </div>
     </div>
