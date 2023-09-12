@@ -7,18 +7,19 @@ const MultiStepsRectangles = () => {
   }=useMultiStepsForm();
 
   return (
-    <ul className="my-2  list-none flex gap-2 justify-center">
-        <li className={`border-2 ${step==1?"bg-secondary-color-theme":"bg-transparent"}  rounded 
+    <ul className=" my-4   list-none flex gap-2 justify-center">
+        <li className={`border-2 ${step==1?"flash-color":"bg-transparent"} 
+         rounded-xl h-5 w-28 lg:w-28
          border-secondary-color-theme 
-         h-3 w-24 lg:w-28`}></li>
+         `}></li>
         <li className={`border-2 ${step==2?"bg-secondary-color-theme":"bg-transparent"} 
-          rounded 
          border-secondary-color-theme 
-         h-3 w-24 lg:w-28`}></li>
+         rounded-xl h-5 w-28 lg:w-28
+         `}></li>
         <li className={` ${step==3?"bg-secondary-color-theme":"bg-transparent"} 
-            border-2 rounded 
+          border-2 rounded-xl h-5 w-28 lg:w-28
          border-secondary-color-theme 
-         h-3 w-24 lg:w-28`}></li>
+         `}></li>
       </ul>
   )
 }

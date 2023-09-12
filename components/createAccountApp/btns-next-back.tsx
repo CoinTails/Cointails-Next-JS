@@ -24,36 +24,39 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
   const {step,setStep,next,setNext,previous,setPrevious
   }=useMultiStepsForm();
   const handleNext=()=>{
-    setNext();
+    {next !== 3?setNext():null}
+
     console.log(step)
 
   }
   const handlePrevious=()=>{
     console.log(step)
     setPrevious();
+    {previous !== 0?setNext():null}
+
     
   }
 
   return (
-    <div className={`flex  justify-between max-w-[100%] my-4
-            ${nextText?'flex-row-reverse':'flex-row'} mt-4 `}>
+    <div className={`flex  justify-between max-w-[100%] my-8
+            ${nextText?'flex-row-reverse':'flex-row'}`}>
              <Button
-
-                  disabled={step===3 && isDisabled}
+                  disabled={step===3 }
                   onClick={handleNext}
                   type="submit"
-                  className={`ml ${nextText?'':'hidden'} hover:bg-primary-second-color hover:text-white   px-6 sm:px-10  bg-secondary-color-theme `}
+                  className={` transition-all duration-75   ml ${nextText?'':'hidden'} 
+                   hover:text-white 
+                    px-14 py-6 text-xl font-bold sm:px-20 bg-secondary-color-theme hover:bg-secondary-color-theme `}
                   >
                   {nextText} <span className='ml-4'>{nextIcon && nextIcon}</span>
           </Button>
-          <Button 
-                
+          <Button
                   disabled={step===1}
-
                   variant={"outline"}
                   type="submit"
                   onClick={handlePrevious}
-                  className={`ml ${backText?'':'hidden'} hover:border-primary-second-color hover:text-primary-second-color px-6 sm:px-10 
+                  className={`ml ${backText?'':'hidden'} hover:border-primary-second-color
+                   hover:text-primary-second-color  px-14 py-6 text-xl font-bold sm:px-20 
                    border-secondary-color-theme text-secondary-color-theme `}
                   >
                   {backText} {backIcon && backIcon }

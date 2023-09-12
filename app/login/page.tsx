@@ -5,7 +5,7 @@ import LoginMultisteps from '@/components/loginApp/LoginMultisteps';
 
 const LoginPage = () => {
   return (
-    <div className='mx-4'>
+    <div className=' w-full mx-auto text-center max-w-[992px]'>
       <AccountPalanceNav title={"Login to Your Account"}  component={LoginMultisteps} />
     </div>
   )

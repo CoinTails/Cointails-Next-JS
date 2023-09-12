@@ -1,0 +1,89 @@
+:root {
+  --main-font-family:'Mona Sans';
+  --first-color:#39A;
+  --text-color:'#000';
+  --foreground: 222.2 84% 4.9%;
+  --primary-first-color:#7149E3;
+  --primary-second-color:#A049E3;
+
+  --opacity-first-color:#EEE9FC;
+  --first-dark-color:#3E3E3E;
+  --main-background-color:#F1F1F1;
+  --main-paragraph-color:#5E5E5E;
+  --secondary-color-theme:#9B619B;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+ 
+}
+
+
+
+
+.main-heading {
+  animation: fadeIn 1s 0.1s ease-in backwards;
+}
+.flash-color  {
+  animation: flash-animation 1s 0.2s linear forwards;
+}
+
+.smooth-h {
+  animation:animate-h 2s 1s cubic-bezier(.04,.79,.49,.93) forwards;
+}
+
+input {
+  animation:fadeIn 1s ease-in-out
+}
+.animate-slide {
+  --offset:3px;
+animation-name:slide-in;
+border-color: var(--primary-second-color);
+animation-duration:0.3s;
+border-radius: 10px !important;
+animation-iteration-count:1;
+animation-delay: 0.5s;
+animation-timing-function:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+animation-fill-mode:both;
+    opacity: 0;
+ 
+  /* transform: scale(0); */
+}
+
+/* .active .animate-slide {
+  animation: none;
+  opacity: 1;
+  transform: scale(1);
+} */
+
+@keyframes slide-in {
+  from {
+    border-color:transparent ;
+  }
+  to {
+    border-color:
+      var(--secondary-color-theme)  ;
+     }
+}
+
+@keyframes animate-h {
+  /* from {
+    height: 0;
+  }to {
+    height:fit-content;
+  } */
+}
+
+
+@keyframes flash-animation {
+  from {
+    background-color: transparent;
+    opacity: 0;
+  }
+  to {
+    background-color: var(--secondary-color-theme);
+    opacity: 1;
+  }
+}
+
+
+

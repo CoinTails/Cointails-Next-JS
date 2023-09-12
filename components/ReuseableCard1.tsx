@@ -1,5 +1,7 @@
+"use client"
 import MultiStepsRectangles from "@/components/createAccountApp/multi-step-rectangles"
-
+import { cn } from "@/lib/utils";
+import { boolean } from "zod";
 
 
 interface ChildComponentProps{
@@ -8,7 +10,11 @@ interface ChildComponentProps{
   mainText?:string,
   secondText?:string,
   isEmail?:boolean,
+  className?:string,
   isMultistep?:boolean,
+  cardRef?:React.RefObject<HTMLDivElement>,
+  cardHeight?:number,
+  isActive?:boolean,
 }
 
 const ReusableCard1:React.FC<ChildComponentProps> = ({
@@ -16,25 +22,42 @@ const ReusableCard1:React.FC<ChildComponentProps> = ({
   component:Component,
   mainText,
   secondText,
-  isEmail,
-  isMultistep=true
+  isEmail=false,
+  className,
+  isMultistep=true,
+  cardRef,
+  cardHeight,
+  isActive,
 
 }) => {
+  
   return (
     <>
 
-   <div className="rounded-lg  border sm:py-auto
-          w-full mx-4  md:w-10/12 lg:w-3/4
-          pt-5 pb-2 px-0 sm:px-auto 
-           border-secondary-color-theme">
-      <div className="mx-4 sm:mx-8 text-center ">
-        {HeaderComponent?<HeaderComponent mainText={mainText} secondText={secondText}  />
-        :null}
-      {isMultistep?<MultiStepsRectangles />:null}
-      <Component isEmail={isEmail}  />
-      </div>
- </div>
+<div
+  ref={cardRef}
+  className={cn(
+    `rounded-lg border sm:py-auto w-full mx-4
+     md:w-10/12 lg:w-3/4 pt-5 pb-2 px-0 sm:px-auto border-secondary-color-theme  animate-slide ${
+      className && className
+    }`,
+    { active: isActive }
+  )}
+  style={{
+    height: cardHeight ? `${cardHeight}px`:`fit-content`,
+    opacity: cardHeight ? '1' : '1',
+    transition:"1s "
+  }}
+>
  
+  <div className="mx-4 sm:mx-8 text-center">
+    {HeaderComponent && <HeaderComponent mainText={mainText} secondText={secondText} />}
+    {isMultistep && <MultiStepsRectangles />}
+    <Component isEmail={isEmail}  />
+    <div className="animate__animated animate__fadeOut animate__animated animate__fadeIn">Hello, World!</div>
+  </div>
+</div>
+
  
  </>
 

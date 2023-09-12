@@ -1,5 +1,5 @@
 "use client"
-
+import { cn } from "@/lib/utils";
 import { Form,
          FormField,
          FormItem,
@@ -21,7 +21,14 @@ import BtnsNextBack from "@/components/createAccountApp/btns-next-back";
 const formSchema = z.object({
   username: z.string().min(2).max(50),
 })
-const LoginAccountForm = () => {
+
+interface LoginAccountFormProps {
+    className?:string,
+    isEmail?:boolean
+}
+const LoginAccountForm:React.FC<LoginAccountFormProps> = ({
+  
+}) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -31,7 +38,7 @@ const LoginAccountForm = () => {
   return (
     <>
     <Form {...form}>
-      <form className="my-8">
+      <form className={cn("my-8 animate__animated animate__fadeIn")}>
     {/* Password */}
     <FormField
         control={form.control}

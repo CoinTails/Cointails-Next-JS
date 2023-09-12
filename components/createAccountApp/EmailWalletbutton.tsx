@@ -2,16 +2,24 @@ import React from 'react'
 import { Wallet,MailMinus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import BtnsNextBack from './btns-next-back'
+import { inter } from '@/app/fonts'
+import { cn } from '@/lib/utils'
+interface EmailWalletbuttonProps {
+  className?:string,
+  isEmail?:boolean
+}
 
-const EmailWalletbutton = () => {
+const EmailWalletbutton:React.FC<EmailWalletbuttonProps> = ({
+  className
+}) => {
   return (
     <>
-      <div className='flex my-4 justify-center gap-1'>
+      <div className={cn('flex justify-center gap-4',className)}>
       <Button 
       variant={"outline"}
-      className='flex justify-center border-2 flex-col h-auto max-w-[50%]'
+      className='animate__animated animate__fadeIn flex justify-center border-2 py-10 flex-col h-auto max-w-[50%]'
       >
-      <MailMinus className="w-4 h-4  text-secondary-color-theme my-2" />
+      <MailMinus className="w-6 h-6  text-secondary-color-theme my-2" />
       <h2 className='text-secondary-color-theme inline-flex mb-2
        text-[1rem] tracking-tight font-mono font-semibold text'
        
@@ -30,9 +38,9 @@ const EmailWalletbutton = () => {
       </Button>
       <Button 
       variant={"outline"}
-      className='flex justify-center border-2 flex-col h-auto max-w-[50%]'
+      className='animate__animated animate__fadeIn flex justify-center border-2 flex-col h-auto max-w-[50%]'
       >
-      <Wallet className="w-4 h-4  text-secondary-color-theme my-2" />
+      <Wallet className="w-6 h-6 text-secondary-color-theme my-2" />
       <h2 className='text-secondary-color-theme inline-flex mb-2
        text-[1rem] tracking-tight font-mono font-semibold text'
        

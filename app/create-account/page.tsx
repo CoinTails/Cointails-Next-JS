@@ -4,7 +4,7 @@ import Multisteps from '@/components/createAccountApp/multisteps'
 const createAccountPage = () => {
   return (
     <>
-    <div className='mx-4'>
+    <div className=' w-full mx-auto text-center max-w-[992px]'>
 
     <AccountPalanceNav title={"create Your Account"}  component={Multisteps}/>
     </div>

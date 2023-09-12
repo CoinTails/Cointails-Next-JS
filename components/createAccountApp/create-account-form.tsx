@@ -60,14 +60,15 @@ const CreateAccountForm: React.FC<CreateAccountProps> = ({ isEmail }) => {
   return (
     <>
       <Form {...form}>
-        <form className="my-8">
+        <form className="my-8 transition-all">
           <FormField
             control={form.control}
             name="username"
             render={({ field }) => (
               <FormItem>
                 <FormControl className=" focus-visible:border-none">
-                  <div className="relative focus-visible:border-none">
+                  {/* add animate.css animations */}
+                  <div className="  relative focus-visible:border-none ">
                     <div className="absolute z-50 top-1/2 left-2 transform w-auto
                      -translate-y-1/2 ">
                       {!isEmail ? (
@@ -81,7 +82,7 @@ const CreateAccountForm: React.FC<CreateAccountProps> = ({ isEmail }) => {
                       placeholder={
                         isEmail ? "enter your email" : "Enter your text"
                       }
-                      className="h-14  border relative -z-1 border-first-color
+                      className="fade-in   h-14  border relative -z-1 border-first-color
                          px-10 py-2 focus:outline-none
                          focus:border-none
                      pr-10 rounded-md "

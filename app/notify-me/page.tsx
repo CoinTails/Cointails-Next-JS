@@ -1,5 +1,5 @@
-import NotifyMe from "@/components/cards/NotifyMe"
-
+import NotifyMe from "./components/NotifyMe"
+import NotifyMeModal from "./components/notifyme-modal"
 const Home=(
 )=> {
   const headerValues = {
@@ -8,9 +8,12 @@ const Home=(
   }
   return (
     <main  className="">
-      <div className="" >
+      <div className="">
       <NotifyMe/>
       </div>
+      {/* <NotifyMeModal/> */}
+      <div className="animate__animated animate__slideInDown">Hello, World!</div>
+      {/* <h1 className="animate__animated animate__bounce">An animated element</h1> */}
 
       </main>
   )
