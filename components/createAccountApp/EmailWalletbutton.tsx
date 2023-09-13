@@ -17,7 +17,9 @@ const EmailWalletbutton:React.FC<EmailWalletbuttonProps> = ({
       <div className={cn('flex justify-center gap-4',className)}>
       <Button 
       variant={"outline"}
-      className='animate__animated animate__fadeIn flex justify-center border-2 py-10 flex-col h-auto max-w-[50%]'
+      style={{
+      }}
+      className='animate__animated animate__fadeIn flex transition-all duration-300 ease-in-out focus:scale-105 justify-center border-2 py-10 flex-col h-auto max-w-[50%]'
       >
       <MailMinus className="w-6 h-6  text-secondary-color-theme my-2" />
       <h2 className='text-secondary-color-theme inline-flex mb-2

@@ -11,7 +11,6 @@ const Home=(
       <div className="">
       <NotifyMe/>
       </div>
-      {/* <NotifyMeModal/> */}
       <div className="animate__animated animate__slideInDown">Hello, World!</div>
       {/* <h1 className="animate__animated animate__bounce">An animated element</h1> */}
 

@@ -96,6 +96,11 @@
   background: radial-gradient(circle at left, #eee 60%, #A049E3 40%, #7149E3 80%);
 }
 
+.color-gradient{
+  color:linear-gradient(white, #A049E3  ,#A049E3, #7149E3   ,#7149E3  , white);
+
+}
+
 @media screen and (max-width:767px) {
   .bg-gradient-radial-circle-left {
     background: radial-gradient(circle at top, #eee 0%, #A049E3 40%, #7149E3 80%);
@@ -110,5 +115,6 @@
   }
   100% {
     background: radial-gradient(circle at top, #eee 70%, #A049E3 30%, #7149E3 90%);
+    
   }
 }
