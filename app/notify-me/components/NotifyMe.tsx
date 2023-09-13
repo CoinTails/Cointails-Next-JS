@@ -17,7 +17,7 @@ const NotifyMe = () => {
       <div className="bg-gradient-radial-circle-left  
       w-[100vw] mx-auto h-[100vh] overflow-hidden z-10">
         <div className="flex flex-col justify-start  lg:px-40
-         md:justify-between w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 md:py-10 py-11">
+         md:justify-between w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 py-4 md:py-10">
           {/* Large screen */}
           <div className='hidden md:block'>
             <CenterCoinTail ourLogoSrc={OurLogo} coinLogoSrc={Coin} tailLogoSrc={Tail} />
@@ -26,8 +26,8 @@ const NotifyMe = () => {
           <div className='block mb-4 transform  sm:scale-110 md:mb-4 md:hidden'>
             <CenterCoinTail ourLogoSrc={OurLogo} coinLogoSrc={Coin} tailLogoSrc={Tail} />
           </div>
-          <div className="rounded-xl mt-4 px-8 py-4 flex flex-col justify-center items-center">
-            <h2 className="text-first-dark-color text-md text-center sm:text-md  text-black md:text-first-dark-color font-bold">
+          <div className="rounded-xl mt-2 px-2  sm:px-8 py-4 flex flex-col justify-center items-center">
+            <h2 className="text-first-dark-color text-sm text-center sm:text-md  text-black md:text-first-dark-color font-bold">
               ENTER YOUR MAIL TO GET NOTIFIED WHEN WE ARE LIVE
             </h2>
             <div className="relative w-full transform sm:scale-110  my-8">
