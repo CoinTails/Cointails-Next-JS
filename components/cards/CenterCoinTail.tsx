@@ -23,7 +23,7 @@ const CenterCoinTail: React.FC<ImageComponentProps> = ({
                 <Image className="transform scale-110 w-28 sm:w-52" src={coinLogoSrc} alt=" Coin Logo" /> &nbsp; &nbsp;
                 <Image className="w-28 sm:w-52" src={tailLogoSrc} alt=" Tail Logo" />
                 </div>
-                <p className="transform w-full sm:scale-110 text-[8px]  md:block font-extralight  sm:text-xs 
+                <p className="transform text-center w-full sm:scale-110 text-[10px]  md:block font-light  sm:text-xs 
                 text-primary-second-color">REVOLUTIONISING E-COMMERCE USING WEB 3</p>
             
             </div>
