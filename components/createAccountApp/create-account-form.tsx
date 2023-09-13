@@ -88,7 +88,8 @@ const CreateAccountForm: React.FC<CreateAccountProps> = ({ isEmail }) => {
                      pr-10 rounded-md "
                       {...field}
                     />
-                   <div className="absolute z-50 top-1/2 right-2 transform w-auto -translate-y-1/2 ">
+                   <div className="absolute z-50 top-1/2 right-2 transform w-auto
+                    -translate-y-1/2 ">
                       {!isEmail ? (
                         <TooltipProviderComponent 
                                   tooltipTrigger={<HelpCircle className="h-4 w-4  text-first-color font-extralight pointer-events-none" />}

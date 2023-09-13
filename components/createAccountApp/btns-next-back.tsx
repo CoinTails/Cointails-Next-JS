@@ -46,7 +46,7 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
                   type="submit"
                   className={` transition-all duration-75   ml ${nextText?'':'hidden'} 
                    hover:text-white 
-                    px-14 py-6 text-xl font-bold sm:px-20 bg-secondary-color-theme hover:bg-secondary-color-theme `}
+                    px-8 py-6 text-xl font-bold sm:px-20 bg-secondary-color-theme hover:bg-secondary-color-theme `}
                   >
                   {nextText} <span className='ml-4'>{nextIcon && nextIcon}</span>
           </Button>

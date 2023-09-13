@@ -38,7 +38,7 @@ const ReusableCard1:React.FC<ChildComponentProps> = ({
 <div
   ref={cardRef}
   className={cn(
-    `rounded-lg border sm:py-auto w-full mx-8  my-28
+    `rounded-lg border sm:py-auto w-full mx-8   my-28
      md:w-10/12 lg:w-3/4 pt-5 pb-2 px-0 sm:px-auto border-secondary-color-theme  animate-slide ${
       className && className
     }`,
@@ -51,11 +51,10 @@ const ReusableCard1:React.FC<ChildComponentProps> = ({
   }}
 >
  
-  <div style={{transform:"rotate(0deg)"}} className="mx-4 sm:mx-8 text-center">
+  <div  className="mx-4 sm:mx-8 text-center">
     {HeaderComponent && <HeaderComponent mainText={mainText} secondText={secondText} />}
     {isMultistep && <MultiStepsRectangles />}
     <Component isEmail={isEmail}  />
-    <div className="animate__animated animate__fadeOut ">Hello, World!</div>
   </div>
 </div>
 
