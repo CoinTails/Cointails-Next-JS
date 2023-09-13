@@ -26,7 +26,7 @@ const NotifyMe = () => {
           <div className='block mb-4 transform  sm:scale-110 md:mb-4 md:hidden'>
             <CenterCoinTail ourLogoSrc={OurLogo} coinLogoSrc={Coin} tailLogoSrc={Tail} />
           </div>
-          <div className="rounded-xl mt-2  sm:px-8 p-4 sm:p-4 flex flex-col justify-center items-center">
+          <div className="rounded-xl mt-4  sm:px-8 p-4 sm:p-4 flex flex-col justify-center items-center">
             <h2 className="text-main-paragraph-color text-[10px] text-center sm:text-md  font-bold">
               ENTER YOUR MAIL TO GET NOTIFIED WHEN WE ARE LIVE
             </h2>
