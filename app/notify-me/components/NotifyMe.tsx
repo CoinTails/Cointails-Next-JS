@@ -23,14 +23,14 @@ const NotifyMe = () => {
             <CenterCoinTail ourLogoSrc={OurLogo} coinLogoSrc={Coin} tailLogoSrc={Tail} />
           </div>
           {/* Small screen */}
-          <div className='block mb-4 transform scale-110 md:mb-4 md:hidden'>
+          <div className='block mb-4 transform  sm:scale-110 md:mb-4 md:hidden'>
             <CenterCoinTail ourLogoSrc={OurLogo} coinLogoSrc={Coin} tailLogoSrc={Tail} />
           </div>
           <div className="rounded-xl mt-4 px-8 py-4 flex flex-col justify-center items-center">
             <h2 className="text-first-dark-color text-md text-center sm:text-md  text-black md:text-first-dark-color font-bold">
               ENTER YOUR MAIL TO GET NOTIFIED WHEN WE ARE LIVE
             </h2>
-            <div className="relative w-full transform scale-110  my-8">
+            <div className="relative w-full transform sm:scale-110  my-8">
               <div className="absolute left-[-5px] rounded-full bg-primary-second-color h-full w-20">
                 <div className="h-full w-full flex justify-center items-center text-white">
                   <Mail className="cursor-pointer md:cursor-auto text-center w-8 h-8" />
