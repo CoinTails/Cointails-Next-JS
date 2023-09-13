@@ -37,7 +37,7 @@ const NotifyMe = () => {
                 </div>
               </div>
               <Input
-                className="rounded-full text-primary-second-color focus:ring-primary-second-color border-2 focus:border-3 hover:border-3 px-20 py-6 md:py-8 border-primary-second-color focus:outline-none hover:outline-primary-second-color"
+                className="rounded-full text-primary-second-color focus:ring-primary-second-color border-2 focus:border-3 hover:border-3 ps-20 py-6 md:py-8 border-primary-second-color focus:outline-none hover:outline-primary-second-color"
                 placeholder="YOURMAIL@GMAIL.COM"
               />
             </div>
