@@ -55,7 +55,7 @@ const NotifyMe = () => {
       );
       console.log(response.status)
       if(response.status === 200){
-          toast.success(`Your Email added to our waiting list ${values.email} `)
+        setisPopper(true)
       }else{
         toast.error("email already exist")
       }
