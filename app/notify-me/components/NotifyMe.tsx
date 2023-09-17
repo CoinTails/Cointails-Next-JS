@@ -45,12 +45,11 @@ const NotifyMe = () => {
       email: "",
     },
   });
-
   const onsubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
     try {
       const response = await axios.post(
-        "",
+        "https://cointails.onrender.com/waitlist",
         values
       );
       console.log(response.status)
