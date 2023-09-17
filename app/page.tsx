@@ -1,3 +1,4 @@
+import React from "react";
 import RecommendedSeller from "@/components/cards/RecommendedSeller"
 import HeaderCard from "@/components/cards/HeaderCard"
 import HorizonalScrollNav from "@/components/cards/HorizonalScrollNav";
@@ -10,6 +11,15 @@ const Home=(
       mainText:"header 1",
       secondText:"header second",    
   }
+  const cards = Array.from({length:6}).map((_,index)=>
+                        (
+                          <React.Fragment key={index}>
+                                        <NewMainCard />
+
+                          </React.Fragment>
+                        )
+
+                      )
   return (
     <main  className="mx-auto 
       w-full md:px-8 max-w-full sm:max-w-7xl flex flex-col
@@ -24,11 +34,7 @@ const Home=(
         </div>
 
       <div className="w-full flex overflow-x-scroll overflow-y-hidden max-h-full ">
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
+      {cards}
       </div>
       </div>
 
@@ -40,11 +46,7 @@ const Home=(
         </div>
 
       <div className="w-full flex overflow-x-scroll ">
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
+      {cards}
       </div>
       </div>
 
@@ -69,20 +71,10 @@ const Home=(
       <div className="w-full my-8 ">
           <p className="text-left">Recommendations</p>
       <div className="w-full flex overflow-x-scroll ">
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
+      {cards}
       </div>
       <div className="w-full flex overflow-x-scroll ">
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
+      {cards}
       </div>
       </div>
 

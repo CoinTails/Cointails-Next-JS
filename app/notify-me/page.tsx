@@ -1,5 +1,20 @@
-import NotifyMe from "./components/NotifyMe"
-import NotifyMeModal from "./components/notifyme-modal"
+import NotifyMe from "./components/NotifyMe";
+
+const sendEmail = async (email:string)=>{
+  try {
+    const response = await fetch("https://cointails.onrender.com/waitlist",{
+      method:"POST",
+      body:JSON.stringify({
+        "email":email,
+        created_at:""
+      })
+    })
+    const data = await response.json()
+    console.log(data)
+  }catch(err){
+    console.log(err)
+  }
+}
 const Home=(
 )=> {
   const headerValues = {
@@ -9,7 +24,7 @@ const Home=(
   return (
     <main  className="">
       <div className="">
-      <NotifyMe/>
+      <NotifyMe />
       </div>
       {/* <h1 className="animate__animated animate__bounce">An animated element</h1> */}
 
