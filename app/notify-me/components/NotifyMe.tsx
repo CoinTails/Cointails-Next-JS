@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { bruno_ace } from "@/app/fonts";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
@@ -28,7 +28,8 @@ import toast from 'react-hot-toast';
 const formSchema = z.object({
   email: z.string().min(1, { message: "Email is required" }).email({
     message: "Must be a valid email",
-  }),});
+  }),
+});
 
 const NotifyMe = () => {
   const [isPopper, setisPopper] = useState(false);
@@ -37,14 +38,15 @@ const NotifyMe = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  type ValidateionSchema = z.infer<typeof formSchema>;
+  type ValidationSchema = z.infer<typeof formSchema>;
 
-  const form = useForm<ValidateionSchema>({
+  const form = useForm<ValidationSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
     },
   });
+
   const onsubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
     try {
@@ -52,37 +54,46 @@ const NotifyMe = () => {
         "https://cointails.onrender.com/waitlist",
         values
       );
-      console.log(response.status)
-      if(response.status === 200){
-        setisPopper(true)
-      }else if( response.status === 302){
-        toast.error(response.data)
-
-      } else if(response.status === 400){
-        toast.error('Faild to read body')
-      }else if(response.status === 500){
-        toast.error('an error occurred')
-      }
-      else{
-        toast.error("email already exist")
+      console.log(response.status);
+      if (response.status === 200) {
+        setisPopper(true);
+      } else if (response.status === 302) {
+        toast.error(response.data);
+      } else if (response.status === 400) {
+        toast.error('Failed to read body');
+      } else if (response.status === 500) {
+        toast.error('An error occurred');
+      } else {
+        toast.error("Email already exists");
       }
     } catch (error) {
-      toast.error(`${error}`)
-
+      toast.error(`${error}`);
       console.log(error);
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      const viewportHeight = window.innerHeight;
+      const bodyHeight = document.body.offsetHeight;
+      const isKeyboardOpen = bodyHeight < viewportHeight;
+      setisPopper(isKeyboardOpen);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className={cn(bruno_ace.className, "http://localhost:8000/api/auth/verifyme/")}>
-      <div
-        className="bg-gradient-radial-circle-left  
-      w-[100vw] mx-auto h-[100vh] overflow-hidden z-10"
-      >
-        <div
-          className="flex flex-col justify-start  lg:px-40
-         md:justify-between w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 py-4 md:py-10"
-        >
+    <div
+      className={cn(bruno_ace.className, "")}
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="bg-gradient-radial-circle-left w-[100vw] mx-auto h-[100vh] overflow-hidden z-10">
+        <div className="flex flex-col justify-start lg:px-40 md:justify-between w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 py-4 md:py-10">
           {/* Large screen */}
           <div className="hidden md:block">
             <CenterCoinTail
@@ -92,14 +103,14 @@ const NotifyMe = () => {
             />
           </div>
           {/* Small screen */}
-          <div className="block  md:hidden mb-4 transform  sm:scale-110 md:mb-4">
+          <div className="block md:hidden mb-4 transform sm:scale-110 md:mb-4">
             <CenterCoinTail
               ourLogoSrc={OurLogo}
               coinLogoSrc={Coin}
               tailLogoSrc={Tail}
             />
           </div>
-          <div className="rounded-xl mt-4 mx-0  sm:px-8 py-4 sm:p-4 flex flex-col justify-center items-center">
+          <div className="rounded-xl mt-4 mx-0 sm:px-8 py-4 sm:p-4 flex flex-col justify-center items-center">
             <h2 className="text-main-paragraph-color text-[10px] text-center sm:text-md  font-bold">
               ENTER YOUR MAIL TO GET NOTIFIED WHEN WE ARE LIVE
             </h2>
