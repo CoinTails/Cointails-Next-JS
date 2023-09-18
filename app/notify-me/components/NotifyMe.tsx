@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { bruno_ace } from "@/app/fonts";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { Currency, Mail } from "lucide-react";
 import OurLogo from "@/public/images/indexLogo.svg";
 import Coin from "@/public/images/Coin.svg";
 import Tail from "@/public/images/Tails.svg";
@@ -37,6 +37,10 @@ const NotifyMe = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  //  handle click outside of popup card
+  const modalRef = useRef<HTMLDivElement>(null)
+
 
   type ValidationSchema = z.infer<typeof formSchema>;
 
@@ -48,7 +52,6 @@ const NotifyMe = () => {
   });
 
   const onsubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
     try {
       const response = await axios.post(
         "https://cointails.onrender.com/waitlist",
@@ -72,20 +75,19 @@ const NotifyMe = () => {
     }
   };
 
+  const handleClickOutSide=(event:MouseEvent)=>{
+      if(modalRef.current && !modalRef.current.contains(event.target as Node)){
+        console.log(isPopper)
+        setisPopper(false)
+      }
+  }
   useEffect(() => {
-    const handleResize = () => {
-      const viewportHeight = window.innerHeight;
-      const bodyHeight = document.body.offsetHeight;
-      const isKeyboardOpen = bodyHeight < viewportHeight;
-      setisPopper(isKeyboardOpen);
-    };
 
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    window.addEventListener("click",handleClickOutSide);
+    return ()=>{
+      document.removeEventListener('click',handleClickOutSide);
+    }
+     }, []);
 
   return (
     <div
@@ -171,7 +173,7 @@ const NotifyMe = () => {
           isPopper ? "block" : "hidden"
         }`}
       >
-        <NotifyMeModal />
+        <NotifyMeModal modalRef={modalRef} />
       </div>
     </div>
   );

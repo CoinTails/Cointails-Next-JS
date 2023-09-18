@@ -1,14 +1,18 @@
 "use client"
 import Lottie from "lottie-react"
+import React from "react";
 import partyPopper from "@/public/images/partypopper.json"
 import { bruno_ace } from '@/app/fonts';
 import { cn } from "@/lib/utils";
-const NotifyMeModal = () => {
+interface NotifyMeModalPros{
+  modalRef:React.RefObject<HTMLDivElement>
+}
+const NotifyMeModal:React.FC<NotifyMeModalPros> = ({modalRef}) => {
 
   return (
-     <div className={cn(bruno_ace.className,"absolute inset-0 z-40 w-full h-full bg-[#00000082]")}>
+     <div  className={cn(bruno_ace.className,`absolute inset-0 z-40  bg-[#00000082] ${modalRef} `)}>
         <div className="fixed  inset-0 mx-4 flex  items-center justify-center z-50">
-        <div className="bg-white w-full flex
+        <div ref={modalRef} className="bg-white w-full flex
          flex-col items-center justify-center sm:w-2/4 text-end rounded-lg shadow-lg p-8">
           <div className="w-40 h-40 me-12">
         <Lottie className="flex justify-end items-end" animationData={partyPopper} loop={true} />
