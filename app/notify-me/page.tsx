@@ -22,8 +22,8 @@ const Home=(
       secondText:"header second",    
   }
   return (
-    <main  className="">
-      <div className="min-[100vh]">
+    <main  className="min-h-screen overflow-y-scroll">
+      <div className="min-[100vh] ">
       <NotifyMe />
       </div>
       {/* <h1 className="animate__animated animate__bounce">An animated element</h1> */}
