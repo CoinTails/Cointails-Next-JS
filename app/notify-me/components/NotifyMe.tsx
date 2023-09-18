@@ -55,7 +55,15 @@ const NotifyMe = () => {
       console.log(response.status)
       if(response.status === 200){
         setisPopper(true)
-      }else{
+      }else if( response.status === 302){
+        toast.error(response.data)
+
+      } else if(response.status === 400){
+        toast.error('Faild to read body')
+      }else if(response.status === 500){
+        toast.error('an error occurred')
+      }
+      else{
         toast.error("email already exist")
       }
     } catch (error) {
@@ -84,7 +92,7 @@ const NotifyMe = () => {
             />
           </div>
           {/* Small screen */}
-          <div className="block mb-4 transform  sm:scale-110 md:mb-4 md:hidden">
+          <div className="block  md:hidden mb-4 transform  sm:scale-110 md:mb-4">
             <CenterCoinTail
               ourLogoSrc={OurLogo}
               coinLogoSrc={Coin}

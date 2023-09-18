@@ -1,14 +1,21 @@
 "use client"
-import toast, { Toaster } from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 const TestPage = () => {
-  const notify = () => toast.error('Here is your toast.');
+  const[isClient,setIsClient]=useState(false)
+  useEffect(()=>{
+    setIsClient(true)
+  },[])
   return (
     <>
-    <div>
-      <button onClick={notify}>Make me a toast</button>
-      <Toaster />
-    </div>
+
+    {isClient?<div
+
+    
+className="w-[100vw] h-[100vh] text-white bg-black">
+  <input/>
+  </div>:"not client"}
+  
     </>
   //   <>
 

@@ -118,3 +118,18 @@
     
   }
 }
+
+
+
+
+/*  for test the keyboard  */
+
+media (max-width: 767px) and (orientation: portrait) and (any-pointer: fine) {
+  /* CSS styles or actions to apply when the keyboard opens */
+  /* For example, you can change the background color */
+ .key-board{
+  body {
+    background-color: lightblue;
+  }
+ }
+}
