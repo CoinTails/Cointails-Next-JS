@@ -26,7 +26,7 @@ const Home=(
       w-full md:px-8 max-w-full sm:max-w-7xl flex flex-col
          gap-4   justify-center items-center mb-20 text-center " >
 
-      <div className="relative z-40">
+      <div className="w-full wrelative z-40">
       <HeaderCard />
         </div>       
       <div className="my-4 w-full left-0 z-30 top-16 bg-opacity-first-color">
