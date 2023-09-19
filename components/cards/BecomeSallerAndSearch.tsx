@@ -10,16 +10,16 @@ import Image from "next/image"
 const BecomeSallerAndSearch = () => {
   const form = useForm();
   return (
-    <div className="w-full flex justify-between items-center ">
+    <div className="w-full  flex justify-between items-center ">
       <Form {...form} >
-      <form className="my-8 w-1/2" >
+      <form className=" w-1/2 flex-1 mr-4" >
     {/* Search field */}
     <FormField
 
         name="username"
         render={({ field }) => (
           
-          <FormItem className="my-4">
+          <FormItem className="">
           {/* <FormControl className=" focus-visible:border-none"> */}
           <div className="relative focus-visible:border-none">
                   <div className="absolute top-1/2 left-2 transform -translate-y-1/2 ">
@@ -31,7 +31,7 @@ const BecomeSallerAndSearch = () => {
                     placeholder="Search Store"
                     className="h-14 border-none border-transparent 
                         bg-main-background-color
-                         px-10 py-2 focus:outline-none
+                         px-10  focus:outline-none
                          focus:border-none
                      pr-10 rounded-md "
                     {...field}

@@ -9,7 +9,6 @@ const HeaderCard = () => {
       <Image className="w-52  md:w-80" src={fullLogo} alt="index Image"/>
       <UserDropDownCard />
     </div>
-    <BecomeSallerAndSearch />
     </>
   )
 }
