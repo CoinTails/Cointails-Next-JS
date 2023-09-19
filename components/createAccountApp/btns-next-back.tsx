@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react'
 import { Button } from '@/components/ui/button'
 interface BtnsNextBackProps {
+  className?:string,
   nextText?:string,
   backText?:string,
   isDisabled?:boolean,
@@ -19,6 +20,7 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
   backIcon,
   mainColor,
   secondColor,
+  className,
   isDisabled=false
 }) => {
   const {step,setStep,next,setNext,previous,setPrevious
@@ -46,19 +48,20 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
                   onClick={handleNext}
                   className={` transition-all duration-75   ml ${nextText?'':'hidden'} 
                    hover:text-white 
-                    px-8 py-6 text-xl font-bold sm:px-20 bg-secondary-color-theme hover:bg-secondary-color-theme `}
+                    px-4 py-6 text-xl
+                     font-bold sm:px-20 bg-secondary-color-theme hover:bg-secondary-color-theme `}
                   >
-                  {nextText} <span className='ml-4'>{nextIcon && nextIcon}</span>
+                  {nextText} <span className='ml-4 hidden sm:block'>{nextIcon && nextIcon}</span>
         </Button>
           <Button
                   disabled={step===1}
                   variant={"outline"}
                   onClick={handlePrevious}
                   className={`ml ${backText?'':'hidden'} hover:border-primary-second-color
-                   hover:text-primary-second-color  px-14 py-6 text-xl font-bold sm:px-20 
+                   hover:text-primary-second-color  py-6 text-xl font-bold  sm:px-20 
                    border-secondary-color-theme text-secondary-color-theme `}
                   >
-                  {backText} {backIcon && backIcon }
+                  {backText} <span className='hidden sm:block'> {backIcon && backIcon }</span>
           </Button>
 
         </div>
