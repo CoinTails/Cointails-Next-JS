@@ -65,11 +65,11 @@ export function UserDropDownCard() {
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-          <Link className='flex' href="/balance" alt="login page">
+         
             <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
             <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-          </Link>
+          
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Settings className="mr-2 h-4 w-4" />
@@ -145,17 +145,15 @@ export function VisitorsDropDownCard() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link className='flex' href="/login" alt="login page">
-            <LogIn className="mr-2 h-4 w-4" />
+                 <LogIn className="mr-2 h-4 w-4" />
             <span>Login</span>
-            </Link>
+            
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-           <Link className='flex' href="/create-account" alt="login page">
-            <UserPlus2 className="mr-2 h-4 w-4" />
+                  <UserPlus2 className="mr-2 h-4 w-4" />
             <span>Sign Up</span>
-            </Link>
+            
             <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
           </DropdownMenuItem>
         
