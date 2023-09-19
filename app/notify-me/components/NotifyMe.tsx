@@ -31,6 +31,8 @@ const formSchema = z.object({
   }),
 });
 
+
+// Component
 const NotifyMe = () => {
   const [isPopper, setisPopper] = useState(false);
   const [email, setEmail] = useState("");
@@ -59,6 +61,7 @@ const NotifyMe = () => {
       );
       console.log(response.status);
       if (response.status === 200) {
+        setIsLoading(true)
         setisPopper(true);
       } else if (response.status === 302) {
         toast.error(response.data);
@@ -154,6 +157,7 @@ const NotifyMe = () => {
                 </div>
                 <Button
                   type="submit"
+                  disabled={isLoading}
                   // onClick={()=>{setisPopper(true)}}
                   style={{
                     background:
