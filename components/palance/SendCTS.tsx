@@ -1,3 +1,4 @@
+"use client";
 import { Form,
          FormField,
          FormItem,
@@ -17,12 +18,16 @@ import { useForm } from "react-hook-form"
 import BtnsNextBack from "@/components/createAccountApp/btns-next-back";
 import { UserIcon ,SendHorizonal} from "lucide-react";
 import SendCTSPopOver from "./SendCTSPopOver";
+import { useStoreModal } from "@/hooks/use-store-modal";
+import { StoreModal } from "../use-modals";
 const formSchema = z.object({
   username: z.string().min(2).max(50),
 })
 
 
 const SendCTS = () => {
+  const storeModal = useStoreModal();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -49,7 +54,7 @@ const SendCTS = () => {
 
       </ul>
     <Form {...form}>
-      <form className="my-4 w-full">
+      <form className="m-auto my-4 w-full">
     {/* Password */}
     <FormField
         control={form.control}
@@ -114,9 +119,21 @@ const SendCTS = () => {
 
         )}
       />   
-        <SendCTSPopOver />   
+
+            <Button  type={"button"} onClick={()=>{ 
+                    storeModal.onOpen();}
+                  }
+                   className="mx-auto  flex min-w-fit  items-center justify-center
+                    flex-inline rounded-lg
+                     font-bold text-base text-white sm:text-2xl
+                   bg-[#3399AA] hover:bg-[#72cada] mt-4 py-8 sm:py-8 px-16 sm:px-24"
+                 >
+                   Send
+                   <SendHorizonal className={"h-4 w-4 sm:w-5 sm:h-5 font-bold ml-2"}/>
+                </Button>
       </form>
     </Form>
+    <StoreModal/>
     </div>
 
     </>

@@ -97,7 +97,7 @@
 }
 
 .color-gradient{
-  color:linear-gradient(white, #A049E3  ,#A049E3, #7149E3   ,#7149E3  , white);
+  background: radial-gradient(circle at top,  #A049E3 50%, #7149E3 100%);
 
 }
 
@@ -124,12 +124,9 @@
 
 /*  for test the keyboard  */
 
-media (max-width: 767px) and (orientation: portrait) and (any-pointer: fine) {
-  /* CSS styles or actions to apply when the keyboard opens */
-  /* For example, you can change the background color */
- .key-board{
-  body {
-    background-color: lightblue;
-  }
- }
+.text-radial {
+  background:radial-gradient(circle, #A049E3 , #7149E3);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
 }

@@ -1,6 +1,7 @@
 "use client";
 
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent,
+   DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 interface ModalProps {
@@ -25,10 +26,10 @@ export const Modal: React.FC<ModalProps> = ({
   };
 
   return ( 
-    <Dialog open={isOpen} onOpenChange={onChange}>
-      <DialogContent>
+    <Dialog  open={isOpen} onOpenChange={onChange}>
+      <DialogContent className="rounded-xl border-[#3399AA]">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle className="m-auto font-normal">{title}</DialogTitle>
           <DialogDescription>
             {description}
           </DialogDescription>

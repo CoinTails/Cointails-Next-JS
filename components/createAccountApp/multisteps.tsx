@@ -42,7 +42,6 @@ const Multisteps = () => {
 
       },[])
       
-      console.log(cardHeight)
   
   return (
   <>
@@ -58,12 +57,11 @@ const Multisteps = () => {
    opacity-${step==1?0:1} ${step === 1 ? 'active' : ''}`}
 />
 )}
-
 {step === 2 && (
   <ReusableCard1
     cardRef={cardRef}
-    component={LoginAccountForm}
     HeaderComponent={CreateAccountHeader}
+    component={LoginAccountForm}
     mainText={"Let Make Account"}
     secondText={"Secure"}
     className={`opacity-${step==2?0:1} ${step === 2 ? 'active' : ''} main-heading transition-all 

@@ -1,16 +1,29 @@
-import React from 'react'
 import { Button } from '../ui/button'
 import { SendHorizonal,Share } from 'lucide-react'
 import Image from 'next/image'
 import Cryptograpy from "../../public/images/cryptocurrency.svg"
 import face1 from "../../public/images/face1.svg"
-
+import { useMultiStepsForm } from '@/hooks/useMultiStepsForm';
 const PalanceBtns = ({
 
 }) => {
-  function linearGradient(arg0: number, deg: any, arg2: any, arg3: number, arg4: any, arg5: number, ABC: any, arg7: number) {
-    throw new Error('Function not implemented.')
+  const {step,setStep,next,setNext,previous,setPrevious
+  }=useMultiStepsForm();
+
+  const handleNext=()=>{
+    setNext();
+
   }
+  
+  const handlePrevious=()=>{
+    setPrevious();
+    
+  }
+  
+  
+
+
+
 
   return (
     <>
@@ -30,8 +43,11 @@ const PalanceBtns = ({
         <div className='text-5xl leading-relaxed  font-black'>CTS 5000</div>
 
       </div>
-    <div className='grid text-2xl w-full grid-cols-2 gap-2'>
-      <Button 
+    <div
+    className='grid text-2xl cursor-pointer w-full grid-cols-2 gap-2'>
+      <Button
+        onClick={handleNext}
+        type={'button'}
        variant={"default"}
        className={" font-bold text-base sm:text-2xl bg-[#3399AA] hover:bg-[#72cada] py-6 sm:py-8 px-auto sm:px-24"}
        >
@@ -40,6 +56,7 @@ const PalanceBtns = ({
         
       </Button>
       <Button 
+       onClick={handleNext}
        variant={"default"}
        className={" font-bold text-base sm:text-2xl  bg-[#9B619B]  hover:bg-[#e5c4e5]  py-6 sm:py-8 px-auto sm:px-22"}
        >
@@ -84,3 +101,4 @@ const PalanceBtns = ({
 }
 
 export default PalanceBtns
+
