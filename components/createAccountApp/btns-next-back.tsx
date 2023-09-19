@@ -48,7 +48,7 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
                   onClick={handleNext}
                   className={` transition-all duration-75   ml ${nextText?'':'hidden'} 
                    hover:text-white 
-                    px-4 py-6 text-xl
+                    px-8 py-6 text-xl
                      font-bold sm:px-20 bg-secondary-color-theme hover:bg-secondary-color-theme `}
                   >
                   {nextText} <span className='ml-4 hidden sm:block'>{nextIcon && nextIcon}</span>
@@ -58,7 +58,7 @@ const BtnsNextBack:React.FC<BtnsNextBackProps> = ({
                   variant={"outline"}
                   onClick={handlePrevious}
                   className={`ml ${backText?'':'hidden'} hover:border-primary-second-color
-                   hover:text-primary-second-color  py-6 text-xl font-bold  sm:px-20 
+                   hover:text-primary-second-color  py-6 text-xl font-bold px-8 sm:px-20 
                    border-secondary-color-theme text-secondary-color-theme `}
                   >
                   {backText} <span className='hidden sm:block'> {backIcon && backIcon }</span>
