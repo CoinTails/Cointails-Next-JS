@@ -54,6 +54,7 @@ const NotifyMe = () => {
   });
 
   const onsubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsLoading(true)
     try {
       const response = await axios.post(
         "https://cointails.onrender.com/waitlist",
@@ -61,10 +62,9 @@ const NotifyMe = () => {
       );
       console.log(response.status);
       if (response.status === 200) {
-        setIsLoading(true)
         setisPopper(true);
       } else if (response.status === 302) {
-        toast.error(response.data);
+        toast.error("This Email already exists");
       } else if (response.status === 400) {
         toast.error('Failed to read body');
       } else if (response.status === 500) {
@@ -75,6 +75,8 @@ const NotifyMe = () => {
     } catch (error) {
       toast.error(`${error}`);
       console.log(error);
+    }finally{
+      setIsLoading(false)
     }
   };
 
@@ -95,9 +97,9 @@ const NotifyMe = () => {
   return (
     <div
       className={cn(bruno_ace.className, "")}
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "100vh min-h-100vh  overflow-x-hidden overflow-y-scroll" }}
     >
-      <div className="bg-gradient-radial-circle-left w-[100vw] mx-auto h-[100vh] overflow-hidden z-10">
+      <div className="bg-gradient-radial-circle-left w-[100vw] mx-auto h-[100vh] z-10">
         <div className="flex flex-col justify-start lg:px-40 md:justify-between w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 py-4 md:py-10">
           {/* Large screen */}
           <div className="hidden md:block">
