@@ -34,8 +34,8 @@ const Wallets = () => {
   }, []);
 
   return (
-    <div className='text-center  bg-[rgba(251,247,247,0.86)]'>
-      <div className='flex flex-col items-center justify-center'>
+    <div className='text-center   bg-[rgba(251,247,247,0.86)]'>
+      <div className='flex flex-col  items-center justify-center'>
         <h2 className='flex justify-center font-bold text-3xl text-secondary-color-theme'>
           <Wallet className='h-8 w-8 mr-4 text-secondary-color-theme' />
           Connect Wallet

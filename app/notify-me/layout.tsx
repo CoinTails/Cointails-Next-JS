@@ -4,11 +4,11 @@ import "@/css/notify-me.css"
 import {inter} from "../fonts"
 import { ToasterProvider } from "@/providers/toastProvider";
 export const metadata: Metadata = {
-  title: 'Motify me',
+  title: 'Notify me',
   description: 'Notify me',
 }
 export default function RootLayout({
-  children,
+children,
 }: {
   children: React.ReactNode
 }) {

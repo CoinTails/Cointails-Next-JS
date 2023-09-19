@@ -34,13 +34,12 @@ const ReusableCard1:React.FC<ChildComponentProps> = ({
   
   return (
     <>
-
 <div
   ref={cardRef}
   className={cn(
-    `rounded-lg border sm:py-auto w-full mx-8   my-10 sm:my-28
+    `rounded-lg  border sm:py-auto   w-11/12   my-4 sm:my-28
      md:w-10/12 lg:w-3/4 pt-5 pb-2 px-0 sm:px-auto
-      border-secondary-color-theme   ${
+      border-secondary-color-theme    ${
       className && className
     }`,
     { active: isActive }

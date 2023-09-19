@@ -9,7 +9,7 @@ import LoginAccountForm from "@/components/createAccountApp/login-component";
 import { useMultiStepsForm } from '@/hooks/useMultiStepsForm';
 import EmailWalletbutton from './EmailWalletbutton';
 const Multisteps = () => {
-
+  const [isReady,setIsReady]=useState(false)
   const [cardHeight,setCardHeight] = useState<number>(0)
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -36,11 +36,17 @@ const Multisteps = () => {
           setCardHeight(cardRef.current.offsetHeight)
         }
       },[step])
+
+      useEffect(()=>{
+        setIsReady(true)
+
+      },[])
       
       console.log(cardHeight)
   
   return (
-    <>
+  <>
+    {isReady && <>
     {step === 1 && (
   <ReusableCard1
   cardRef={cardRef}
@@ -48,7 +54,8 @@ const Multisteps = () => {
   component={CreateAccountForm}
   mainText={"first let's create "}
   secondText={"Your Unique Identity"}
-  className={`animate-card transition-all duration-100 ease-in-out opacity-${step==1?0:1} ${step === 1 ? 'active' : ''}`}
+  className={`animate-card transition-all duration-100 ease-in-out
+   opacity-${step==1?0:1} ${step === 1 ? 'active' : ''}`}
 />
 )}
 
@@ -92,7 +99,10 @@ const Multisteps = () => {
   /> */}
   </>
 )}
-</>
-  )}
+</> 
+}
+  </>
+  )
+}
 
 export default Multisteps

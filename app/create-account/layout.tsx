@@ -13,7 +13,8 @@ export default function CreateAccount({
 }) {
   return (
     <html lang="en">
-      <body className='bg-[backgroundColor:"#b99fdf"]'  style={{backgroundColor:"#b99fdf", fontFamily: 'Mona Sans, sans-serif' }}>
+      <body className=''  
+      style={{ fontFamily: 'Mona Sans, sans-serif' }}>
         {children}</body>
     </html>
   )

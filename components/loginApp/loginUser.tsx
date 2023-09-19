@@ -40,7 +40,7 @@ const LoginForm = () => {
           <FormItem className="my-4">
           <FormControl className=" focus-visible:border-none">
           <div className="relative focus-visible:border-none">
-                  <div className="absolute top-1/2 left-2 transform -translate-y-1/2 ">
+                  <div className="absolute top-1/2 left-2  translate-y-1/2 ">
                   <Shield className="w-4 h-4 text-gray-500 font-extralight pointer-events-none" />
                   </div>
                   <Input

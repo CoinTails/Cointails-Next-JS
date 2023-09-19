@@ -33,7 +33,7 @@ const LoginMultisteps = () => {
       
   
   return (
-    <>
+    <div className=' w-full flex justify-center'>
     {step===1&&
     <ReusableCard1 
     HeaderComponent={CreateAccountHeader}
@@ -55,7 +55,6 @@ const LoginMultisteps = () => {
        isMultistep={false}
        />
       }
-      <hr/>
       {step===3 &&
        <ReusableCard1 
        component={Wallets}
@@ -66,7 +65,7 @@ const LoginMultisteps = () => {
        />
       }
     
-      </>
+      </div>
   )
 }
 

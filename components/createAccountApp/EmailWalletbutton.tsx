@@ -1,3 +1,4 @@
+"use state"
 import React from 'react'
 import { Wallet,MailMinus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -47,14 +48,15 @@ const EmailWalletbutton:React.FC<EmailWalletbuttonProps> = ({
        text-[1rem] tracking-tight font-mono font-semibold text'
        
        >
-        <span style={{'wordSpacing':"-4px"}}>Link Your Email account</span>
+        <span style={{'wordSpacing':"-4px"}}>Connect Wallet</span>
          </h2>
       <p className=' text-gray-400
        tracking-tight text-[0.60rem] leading-tight '
         style={{ }}>
           <span style={{'wordSpacing':"0.3px"}}>
-          Helps in Signing In <br/>
-        Incase you forgot your Password
+          To Purchase  Your Account  <br/>
+          will only be verified after you Link <br/>
+           your Wallet Incase you forgot your Password
           </span>
         </p>
 
