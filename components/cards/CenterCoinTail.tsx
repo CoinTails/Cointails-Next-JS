@@ -23,8 +23,8 @@ const CenterCoinTail: React.FC<ImageComponentProps> = ({
     <>
     <div className= "flex flex-col items-center justify-between  ">
               <div className="w-full flex flex-col  justify-center  items-center">
-              <Image src={ourLogoSrc} className={`${screenHeight <600?'w-16'  :'h-20'}  sm:w-32 ${screenHeight <600?'h-16'  :'h-28'} lg:w-40 md:h-40 `} alt=" mainlogo" />
-              <div className="transform sm:scale-110 rounded-full pt-4 flex bg-transparent bg-[#eee]  mb-4">        
+              <Image src={ourLogoSrc} className={`${screenHeight <600?'w-16'  sm:'h-20'}  sm:w-32 ${screenHeight <600?'h-16'  :'h-28'} lg:w-40 md:h-40 `} alt=" mainlogo" />
+              <div className="transform sm:scale-110 rounded-full pt-4 flex bg-transparent bg-[#eee]  sm:mb-4">        
                 <Image className={`transform scale-110 ${screenHeight <600?'h-16'  :'h-28'} w-28 sm:w-52`} src={coinLogoSrc} alt=" Coin Logo" /> &nbsp; &nbsp;
                 <Image className={`${screenHeight <600?'h-16'  :'h-28'} w-28 sm:w-52`} 
                 src={tailLogoSrc} alt=" Tail Logo" />
