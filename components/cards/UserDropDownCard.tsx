@@ -67,8 +67,9 @@ export function UserDropDownCard() {
           <Link className='flex' href="/balance">
             <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
-            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
           </Link>
+            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+          
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Settings className="mr-2 h-4 w-4" />
