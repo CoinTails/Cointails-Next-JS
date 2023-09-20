@@ -100,7 +100,8 @@ const NotifyMe = () => {
       style={{ minHeight: "100vh min-h-100vh  overflow-x-hidden overflow-y-scroll" }}
     >
       <div className="bg-gradient-radial-circle-left w-[100vw] mx-auto h-[100vh] z-10">
-        <div className="flex flex-col justify-start lg:px-40 md:justify-between w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 py-4 md:py-10">
+        <div className="flex flex-col justify-start lg:px-40 md:justify-between
+           w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 py-4 md:py-10">
           {/* Large screen */}
           <div className="hidden md:block">
             <CenterCoinTail
@@ -110,7 +111,7 @@ const NotifyMe = () => {
             />
           </div>
           {/* Small screen */}
-          <div className="block md:hidden mb-4 transform sm:scale-110 md:mb-4">
+          <div className="block md:hidden  transform sm:scale-110 mb-0 md:mb-4">
             <CenterCoinTail
               ourLogoSrc={OurLogo}
               coinLogoSrc={Coin}
@@ -133,7 +134,7 @@ const NotifyMe = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormControl className="relative w-full transform sm:scale-105  my-4 sm:my-8">
+                        <FormControl className="relative w-full transform sm:scale-105  my-2 sm:my-8">
                        <div>
                        <div className="absolute left-[-5px] rounded-full bg-primary-second-color h-full w-20">
                           <div className="h-full w-full flex justify-center items-center text-white">

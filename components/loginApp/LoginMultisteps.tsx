@@ -19,6 +19,7 @@ const LoginMultisteps = () => {
     mainText:"",
     secondText:""
     }
+
     const {step,setStep,next,setNext,previous,setPrevious
       }=useMultiStepsForm();
     
@@ -62,7 +63,7 @@ const LoginMultisteps = () => {
        secondText={headerValues.secondText}
        isMultistep={false}
 
-       />
+      />
       }
     
       </div>

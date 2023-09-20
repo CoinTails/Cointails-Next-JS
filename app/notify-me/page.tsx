@@ -22,7 +22,7 @@ const Home=(
       secondText:"header second",    
   }
   return (
-    <main  className="min-h-screen overflow-x-hidden overflow-y-scroll">
+    <main  className="min-h-screen overflow-x-hidden">
       <div className="min-[100vh] ">
       <NotifyMe />
       </div>
