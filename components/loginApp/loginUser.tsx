@@ -31,7 +31,7 @@ const LoginForm = () => {
   return (
     <>
     <Form {...form}>
-      <form className="my-8">
+      <form className="animate__animated animate__fadeIn my-8">
     {/* Password */}
     <FormField
         control={form.control}

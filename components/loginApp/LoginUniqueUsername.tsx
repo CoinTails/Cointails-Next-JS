@@ -64,7 +64,7 @@ const LoginUniqueName: React.FC<CreateAccountProps> = ({ isEmail }) => {
       {toggleMail?
       (
         <Form {...form}>
-        <form onSubmit={handleSubmit} className="my-8">
+        <form onSubmit={handleSubmit} className="animate__animated animate__fadeIn my-8">
           <FormField
             control={form.control}
             name="username"

@@ -27,7 +27,7 @@ const PalanceBtns = ({
 
   return (
     <>
-    <div className="flex items-center flex-col  gap-2">
+    <div className="animate__animated animate__fadeIn flex items-center flex-col  gap-2">
       <div 
       className=' 
        flex h-auto cursor-pointer my-4  pt-2 rounded-xl px-6 w-auto  flex-col

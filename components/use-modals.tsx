@@ -63,7 +63,7 @@ export const StoreModal = () => {
             onClose={storeModal.onClose}
         >
             <div>
-                <div className=" space-y-4 rounded-xl py-2 pb-4">
+                <div className="animate__animated animate__fadeIn space-y-4 rounded-xl py-2 pb-4">
                     <Form {...form}>
                     <form className="w-full  my-8 flex flex-col items-center">
     {/* Password */}

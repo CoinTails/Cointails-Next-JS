@@ -43,24 +43,24 @@ const MultistepPalance = ({}) => {
   return (
     <>
    
-   { step === 2 && <>
+   { step === 1 && <>
      <ReusableCard1 
              HeaderComponent={CreateAccountHeader} 
              component={PalanceBtns}
              isMultistep={false}
              className={`animate-card transition-all duration-100 ease-in-out
-             opacity-${step==2?0:1} ${step === 2 ? 'active' : ''}`}
+             opacity-${step==1?0:1} ${step === 1 ? 'active' : ''}`}
                />
    </>
    }
-   { step === 1&& <>
+   { step === 2&& <>
  
               <ReusableCard1 
              HeaderComponent={CreateAccountHeader} 
              component={SendCTS}
              isMultistep={false}
              className={`animate-card transition-all duration-100 ease-in-out
-             opacity-${step==1?0:1} ${step === 1  ? 'active' : ''}`}
+             opacity-${step==2?0:1} ${step === 2 ? 'active' : ''}`}
              />
    </>
    }

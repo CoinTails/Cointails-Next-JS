@@ -36,7 +36,7 @@ const SendCTS = () => {
   })
   return (
     <>
-    <div className="flex justify-center flex-col items-center">
+    <div className="animate__animated animate__fadeIn flex justify-center flex-col items-center">
     <ul
       className=' 
        inline-flex list-none justify-center  w-[fit-content]
