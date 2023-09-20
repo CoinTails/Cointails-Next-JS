@@ -1,4 +1,4 @@
-"use client"
+  "use client"
 import { LogIn, Ticket, UserPlus2 } from 'lucide-react'
 
 import { useState } from 'react'
@@ -6,7 +6,6 @@ import TickerStar from "../../public/images/TickerStar.png"
 
 import UserLogo from "../../public/images/userLogo.svg"
 import Image from 'next/image'
-        
 import {
   Cloud,
   CreditCard,
@@ -65,7 +64,7 @@ export function UserDropDownCard() {
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-          <Link className='flex' href="/balance" alt="login page">
+          <Link className='flex' href="/balance">
             <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
             <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
@@ -145,14 +144,14 @@ export function VisitorsDropDownCard() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Link className='flex' href="/login" alt="login page">
+            <Link className='flex' href="/login">
             <LogIn className="mr-2 h-4 w-4" />
             <span>Login</span>
             </Link>
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-           <Link className='flex' href="/create-account" alt="login page">
+           <Link className='flex' href="/create-account">
             <UserPlus2 className="mr-2 h-4 w-4" />
             <span>Sign Up</span>
             </Link>
