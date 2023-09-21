@@ -100,7 +100,7 @@ const NotifyMe = () => {
       style={{ minHeight: "100vh min-h-100vh  overflow-x-hidden overflow-y-scroll" }}
     >
       <div className=" w-[100vw] mx-auto h-[100vh] z-10">
-        <div className="flex flex-col justify-start lg:px-40 md:justify-between
+        <div className="flex flex-col justify-start lg:px-40 md:justify-around
            w-full md:w-[60%] md:max-w-[60%] h-[100vh] px-4 py-4 md:py-10">
           {/* Large screen */}
           <div className="hidden md:block">
