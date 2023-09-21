@@ -103,7 +103,7 @@
 
 @media screen and (max-width:767px) {
   .bg-gradient-radial-circle-left {
-    background: radial-gradient(circle at top, #eee 0%, #A049E3 40%, #7149E3 80%);
+    background: radial-gradient(circle at top, #eee 50%, #A049E3 40% 60%, #7149E3 80%);
     animation:gradientAnimation 3s ease-in-out forwards;
   }
  
@@ -114,7 +114,7 @@
     background: radial-gradient(circle at top, #eee 0%, #A049E3 40%, #7149E3 80%);
   }
   100% {
-    background: radial-gradient(circle at top, #eee 60%, #A049E3 30%, #7149E3 90%);
+    background: radial-gradient(circle at top, #eee 70%, #A049E3 30%, #7149E3 90%);
     
   }
 }
@@ -125,7 +125,7 @@
 /*  for test the keyboard  */
 
 .text-radial {
-  background:radial-gradient(circle, #A049E3 , #7149E3);
+  color:radial-gradient(circle, #A049E3 , #7149E3);
 
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
