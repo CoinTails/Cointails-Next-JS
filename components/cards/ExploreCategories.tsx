@@ -35,7 +35,7 @@ const ExploreCategories = () => {
     
       const providedCate = cate.length > 15 ?`${cate.substring(0,15)}...`:cate
       return(
-        <div key={index}>
+        <div key={index} className="mb-2">
           <TooltipComponent tooltipTrigger={providedCate} tooltipContent={cate} />
         </div>
       )
