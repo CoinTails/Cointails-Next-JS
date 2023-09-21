@@ -37,5 +37,4 @@ const CenterCoinTail: React.FC<ImageComponentProps> = ({
         </>     
   )
 }
-
 export default CenterCoinTail

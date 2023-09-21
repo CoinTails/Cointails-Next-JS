@@ -24,7 +24,7 @@ const Home=(
   return (
     <main  className="mx-auto 
       w-full md:px-8 max-w-full sm:max-w-7xl flex flex-col
-         gap-4   justify-center items-center mb-20 text-center " >
+         gap-4   justify-center items-center mb-20 text-center overflow-hidden " >
 
       <div className="w-full wrelative z-40">
       <HeaderCard />

@@ -21,7 +21,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import BtnsNextBack from "../createAccountApp/btns-next-back";
 import React from "react";
-import TooltipProviderComponent from "../TooltipProvider";
+import TooltipProviderComponent from "../TooltipComponent";
 import Link from "next/link";
 
 interface CreateAccountProps {

@@ -1,43 +1,59 @@
+import { cn } from "@/lib/utils";
+import TooltipComponent from "@/components/TooltipComponent";
 const ExploreCategories = () => {
+  const expoloreCats=
+  ['John Lewis'
+  ,'Atlassian'
+  ,'ASOS'
+  ,'BP'
+  ,'AT&T'
+  ,'Booking.com'
+  ,'ASOS'
+  ,'Uber'
+  ,'China National Petroleum'
+  ,'Airbnb'
+  ,'Uber'
+  ,'Monzo'
+  ,'Boots'
+  ,'Starling Bank'
+  ,'VSCO'
+  ,'Apple'
+  ,'Amazon'
+  ,'Starling Bank'
+  ,'VSCO'
+  ,'Apple'
+  ,'Amazon'
+  ,'Microsoft'
+  ,'eBay'
+  ,'Costco Wholesale'
+  ,'Skyscanner'
+  ,'BP'
+  ,'Airbnb'
+  ,'Formula 1'
+  ,'Qantas']
+  const filteredCates = expoloreCats.map((cate,index)=>{
+    
+      const providedCate = cate.length > 15 ?`${cate.substring(0,15)}...`:cate
+      return(
+        <div key={index}>
+          <TooltipComponent tooltipTrigger={providedCate} tooltipContent={cate} />
+        </div>
+      )
+  }
+    )
   return (
-    <div className='rounded-xl px-4 py-8  text-left w-full bg-main-background-color '>
+    <div className={cn('rounded-xl px-4 pt-2 scroll-mb-80  text-left w-full bg-main-background-color ')}>
       <h2 className=' text-2xl my-4 font-bold text-primary-first-color'>Explore Categories</h2>
       <div 
      style={{
       display: "grid",
       gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))"
-    }}  >
-      <p>John Lewis</p>
-      <p>Atlassian</p>
-      <p>ASOS</p>
-      <p>BP</p>
-      <p>AT&T</p>
-      <p>Booking.com</p>
-      <p>ASOS</p>
-      <p>Uber</p>
-      <p>China National Petroleum</p>
-      <p>Airbnb</p>
-      <p>Uber</p>
-      <p>Monzo</p>
-      <p>Boots</p>
-      <p>Starling Bank</p>
-      <p>VSCO</p>
-      <p>Apple</p>
-      <p>Amazon</p>
-      <p>Starling Bank</p>
-      <p>VSCO</p>
-      <p>Apple</p>
-      <p>Amazon</p>
-      <p>Microsoft</p>
-      <p>eBay</p>
-      <p>Costco Wholesale</p>
-      <p>Skyscanner</p>
-      <p>BP</p>
-      <p>Airbnb</p>
-      <p>Formula 1</p>
-      <p>Qantas</p>
+    }}  
+    className="text text-xs text-main-paragraph-color"
+    >
+      
 
-
+      {filteredCates}
       
     </div>
     </div>

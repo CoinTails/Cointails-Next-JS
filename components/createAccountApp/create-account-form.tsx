@@ -29,7 +29,7 @@ import { useForm } from "react-hook-form";
 import BtnsNextBack from "./btns-next-back";
 import React from "react";
 import { CreateProgramOptions } from "typescript";
-import TooltipProviderComponent from "../TooltipProvider";
+import TooltipProviderComponent from "../TooltipComponent";
 
 interface CreateAccountProps {
   isEmail?: boolean;
