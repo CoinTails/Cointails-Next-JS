@@ -1,9 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import {inter} from "./fonts"
-import { ToasterProvider } from '@/providers/toastProvider';
-import "@/css/cards.css"
-// import { ThemeProvider } from "@material-tailwind/react";
+
 
 export const metadata: Metadata = {
   title: 'Coin tail ',
@@ -17,13 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body  style={{ fontFamily: 'Mona Sans, sans-serif' }}
-       className={inter.className} >
-        <ToasterProvider />
-        {/* <ThemeProvider> */}
+      <body style={{ fontFamily: 'Mona Sans, sans-serif' }} >
         {children}
-        {/* </ThemeProvider> */}
-        </body>
+      </body>
     </html>
   )
 }

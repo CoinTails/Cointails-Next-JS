@@ -1,97 +1,90 @@
-import React from "react";
-import RecommendedSeller from "@/components/cards/RecommendedSeller"
-import HeaderCard from "@/components/cards/HeaderCard"
-import HorizonalScrollNav from "@/components/cards/HorizonalScrollNav";
-import NewMainCard from "@/components/cards/NewMainCard"
-import { ChevronRightSquare } from "lucide-react";
-import ExploreCategories from "@/components/cards/ExploreCategories";
-import BecomeSallerAndSearch from "@/components/cards/BecomeSallerAndSearch";
-const Home=(
-)=> {
-  const headerValues = {
-      mainText:"header 1",
-      secondText:"header second",    
-  }
-  const cards = Array.from({length:3}).map((_,index)=>
-                        (
-                          <React.Fragment key={index}>
-                                        <NewMainCard />
+import React from 'react'
+import LandingPage from './components/LandingPage/LandingPage'
+import MiddlePage from './components/LandingPage/MiddlePage'
 
-                          </React.Fragment>
-                        )
 
-                      )
-  return (
-    <main  className="mx-auto 
-      w-full md:px-8 max-w-full sm:max-w-7xl flex flex-col
-         gap-4   justify-center items-center mb-20 text-center overflow-hidden " >
+// For You Image
+import Reactangle3 from '../public/images/Rectangle 132 (1).png'
+import Reactangle4 from '../public/images/Rectangle 134 (1).png'
+import Reactangle5 from '../public/images/Rectangle 136 (1).png'
 
-      <div className="w-full wrelative z-40">
-      <HeaderCard />
-        </div>       
-      <div className="my-4 w-full left-0 z-30 top-16 bg-opacity-first-color">
-      <HorizonalScrollNav/>
-    </div>
-    <div className="hidden min-w-full sm:block">
-        <BecomeSallerAndSearch />
-        </div>
-        <hr/>
-      {/* on offer */}
-      <div className="w-full mb-8 mt-16 ">
-        <div className="flex justify-between w-full text-first-dark-color px-2 sm:px-4">
-          <p>On Offer</p>
-          <p className="flex cursor-pointer">see All <ChevronRightSquare className="mx-2 text-first-dark-color"/></p>
-        </div>
+import Reactangle6 from '../public/images/Rectangle 134 (2).png'
+import Reactangle7 from '../public/images/Rectangle 136 (2).png'
+import Reactangle8 from '../public/images/Rectangle 136 (2).png'
+import PopularPage from './components/LandingPage/PopularPage'
+import CardCategories from './components/LandingPage/CardCategories'
+import RecommendationCard from './components/LandingPage/RecommendationCard'
+import SecondRecommend from './components/LandingPage/SecondRecommend'
 
-      <div className="w-full flex overflow-x-scroll  ">
-      {cards}
-   
-      </div>
-      </div>
+const middlePagePropsArray = [
+   {
+      src1: Reactangle3,
+      title1: 'Plant Wallpaper',
+      description1:
+         'Temporibus at hic ut. consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi. Officiis perspiciatis ratione in odio repellat consequatur qui vero voluptas qui. quia.',
+      price1: 400,
+      src2: Reactangle4,
+      title2: 'White Keyboard',
+      description2:
+         'Temporibus at hic ut. consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi. Officiis perspiciatis ratione in odio repellat consequatur qui vero voluptas qui. quia.',
+      price2: 2200,
+      src3: Reactangle5,
+      title3: 'Gray Classic Watch',
+      description3:
+         'Temporibus at hic ut. consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi. Officiis perspiciatis ratione in odio repellat consequatur qui vero voluptas qui. quia.',
+      price3: 2200,
+   },
+   // Add more objects with props as needed
+];
 
-    {/*For You  */}
-      <div className="w-full my-8">
-        <div className="flex justify-between w-full text-first-dark-color px-2 sm:px-4">
-          <p>For You</p>
-          <p className="flex cursor-pointer">see All <ChevronRightSquare className="mx-2 text-first-dark-color"/></p>
-        </div>
+const middlePagePropsArray1 = [
+   {
+      src1: Reactangle6,
+      title1: 'Blue Teal Chair',
+      subTitle2: 'Popular',
+      description1:
+         'Temporibus at hic ut. consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi. Officiis perspiciatis ratione in odio repellat consequatur qui vero voluptas qui. quia.',
+      price1: 4100,
+      src2: Reactangle7,
+      title2: 'Hanging Lamps',
+      description2:
+         'Temporibus at hic ut. consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi. Officiis perspiciatis ratione in odio repellat consequatur qui vero voluptas qui. quia.',
+      price2: 2800,
+      src3: Reactangle8,
+      title3: 'Artifical Plants',
+      description3:
+         'Temporibus at hic ut. consequatur qui vero voluptas qui. Pariatur atque autem illo iste quasi. Officiis perspiciatis ratione in odio repellat consequatur qui vero voluptas qui. quia.',
+      price3: 400,
+   },
+   // Add more objects with props as needed
+];
 
-      <div className="w-full flex overflow-x-scroll ">
-      {cards}
+const Home: React.FC = () => {
+   return (
+      <div>
+         <LandingPage />
+         <div>
+            {middlePagePropsArray.map((props, index) => (
+               <MiddlePage key={index} {...props} />
+            ))}
+         </div>
+         <div>
+            {middlePagePropsArray1.map((props, index) => (
+               <PopularPage key={index} {...props} />
+            ))}
+         </div>
+         <CardCategories />
+         <div>
+            {middlePagePropsArray.map((props, index) => (
+               <RecommendationCard key={index} {...props} />
+            ))}
+         </div>
+         <div>
+            {middlePagePropsArray.map((props, index) => (
+               <SecondRecommend key={index} {...props} />
+            ))}
+         </div>
       </div>
-      </div>
-
-      {/* popular */}
-      <div className="w-full my-8 ">
-        <div className="flex justify-between w-full text-first-dark-color px-2 sm:px-4">
-          <p>Popular</p>
-          <p className="flex cursor-pointer">see All <ChevronRightSquare className="mx-2 text-first-dark-color"/></p>
-        </div>
-
-      <div className="w-full flex overflow-x-scroll ">
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      <NewMainCard />
-      </div>
-      </div>
-      {/* Explore Categories */}  
-      
-      <ExploreCategories/>
-      <div className="w-full my-8 ">
-          <p className="text-left">Recommendations</p>
-      <div className="w-full flex overflow-x-scroll ">
-      {cards}
-      </div>
-      <div className="w-full flex overflow-x-scroll ">
-      {cards}
-      </div>
-      </div>
-
-      </main>
-  )
+   );
 }
-
-
 export default Home
